@@ -1,2 +1,183 @@
-# trading-tools-rsl-docs
-Trading Tools: Relative Strength by Levy
+# RSL Momentum Screener – Benutzerhandbuch
+
+**Relative Stärke nach Levy (RSL)** · Version 1.0
+
+Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release/1.0.0>
+
+> **Haftungsausschluss:** Dieses Tool dient ausschließlich Bildungs- und Forschungszwecken.
+> Es stellt **keine Anlageberatung** dar, und es werden keine Anlageempfehlungen gegeben.
+> Die Entwickler sind keine Finanzberater und übernehmen keine Verantwortung für finanzielle
+> Entscheidungen oder Verluste, die aus der Nutzung dieses Tools resultieren. Konsultieren Sie
+> immer einen professionellen Finanzberater, bevor Sie Anlageentscheidungen treffen.
+
+---
+
+## 1. Überblick und Zweck
+
+Der **RSL Momentum Screener** ist ein Desktop-Programm, mit dem Sie US-Aktien mit besonders
+starker oder besonders schwacher **relativer Stärke** im Vergleich zu ihrem gleitenden
+Durchschnitt (SMA) auffinden können. Grundlage ist die **Relative Stärke nach Levy (RSL)**.
+
+Das Tool durchsucht die Aktien der großen US-Indizes **S&P-500**, **NASDAQ-100** und
+**Dow Jones**, berechnet für jede Aktie das Verhältnis von Kurs zu gleitendem Durchschnitt und
+zeigt die stärksten (bzw. schwächsten) Werte als Rangliste an:
+
+- **Top 10** – die zehn Basiswerte mit der höchsten relativen Stärke
+- **Positionen 11–20** – die nächsten zehn Werte der Rangliste
+
+**Filter Kriterien**  
+
+- Der letzte **Schlußkurs** muss höher als der konfigurierte SMA sein. (Bei Abwärtstrend, niedriger) 
+- Die **Marktkapitalisierung** ist gerößer als 50 Mrd US$
+- Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
+- Die RSL des Basiswertes muss unter den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Die Rangliste (RSL) wird im Index für alle Basiswerte (Aktien) erstellt.
+
+Die Berechnung erfolgt live über die öffentliche TradingView-Datenbank. Es ist kein Konto und
+keine Anmeldung erforderlich. Die Daten sind um 15 Minuten verzögert.  
+
+---
+
+## 2. Installation
+
+Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
+
+➡️ **Download:** <https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM>
+
+| Plattform | Paketname                              |
+|-----------|----------------------------------------|
+| macOS     | `RSL-MomentumScreener-macos-arm.zip`   |
+| Windows   | `RSL-MomentumScreener-win-x86-64.zip`  |
+
+### 2.1 macOS (Apple Silicon / ARM)
+
+Das macOS-Paket ist **signiert und notariell beglaubigt (notarized)** und kann daher ohne
+zusätzliche Sicherheitswarnungen gestartet werden.
+
+1. Datei `RSL-MomentumScreener-macos-arm.zip` herunterladen. Das ZIP-Archiv wird in der Regel
+   automatisch entpackt.
+2. Die App **`RSL-MomentumScreener.app`** an einen in den Ordner **`/Programme` (/Applications)**.
+3. App per Doppelklick starten.
+
+> ⚠️ **Wichtige Einschränkung:** Starten Sie die App **nicht direkt aus dem Ordner „Downloads“**.
+> MacOS führt Programme aus dem Download-Ordner in einer eingeschränkten Umgebung aus, wodurch
+> die App nicht korrekt funktioniert. Verschieben Sie die App vorher in den Ordner „Programme“.
+
+### 2.2 Windows (64-Bit)
+
+Das Windows-Paket ist **nicht signiert**. Windows Defender (SmartScreen) wird den Start daher
+zunächst blockieren. Das ist normal und kein Hinweis auf Schadsoftware.
+
+1. Datei `RSL-MomentumScreener-win-x86-64.zip` herunterladen und entpacken.
+2. Die Datei **`RSL-MomentumScreener.exe`** per Doppelklick starten.
+3. Erscheint die Meldung **„Der Computer wurde durch Windows geschützt“**:
+   - Auf **„Weitere Informationen“** klicken.
+   - Anschließend auf **„Trotzdem ausführen“ (Run anyway)** klicken.
+
+Diese Bestätigung ist nur beim ersten Start erforderlich.
+
+---
+
+## 3. Bedienung des Tools
+
+Nach dem Start erscheint zunächst ein **Lizenz-/Hinweisfenster (About / Lizenz)**. Mit **„OK“**
+bestätigen Sie die Nutzungsbedingungen und gelangen in die Anwendung. Mit **„Cancel“** wird die
+Anwendung beendet.
+
+### 3.1 Daten laden
+
+1. Filtereinstellungen nach Wunsch anpassen (siehe Abschnitt 5).
+2. Auf **„Daten Laden/Aktualisieren“** klicken.
+3. In der Statuszeile erscheint zunächst *„Lade Daten, bitte um etwas Geduld...“*, danach die
+   Anzahl der gefundenen Aktien (z. B. *„42 Aktien gefunden.“*).
+4. Die Ergebnisse werden in den beiden Tabellen **Top 10** und **Positionen 11–20** angezeigt.
+
+> ℹ️ **Wichtig:** Nach **jeder** Änderung an den Filtereinstellungen müssen Sie erneut auf
+> **„Daten Laden/Aktualisieren“** klicken, damit die Tabellen aktualisiert werden.
+
+> ⏳ **Geduld bei „Bester Basiswert pro Sektor“:** In diesem Modus wird jeder Sektor einzeln
+> durchsucht. Die Abfrage dauert daher deutlich länger als die Standard-Suche.
+
+### 3.2 Weitere Schaltflächen
+
+| Schaltfläche                  | Funktion                                                              |
+|-------------------------------|----------------------------------------------------------------------|
+| **Daten Laden/Aktualisieren** | Lädt bzw. aktualisiert die Ergebnisse anhand der Filtereinstellungen. |
+| **Zurücksetzen**              | Setzt alle Filter auf die Standardwerte zurück und leert die Tabellen.|
+| **Schließen**                 | Beendet die Anwendung.                                                |
+| **About / Lizenz**            | Zeigt erneut die Lizenz- und Hinweisinformationen an.                 |
+
+---
+
+## 4. Die Ergebnistabellen – Spaltenbeschreibung
+
+| Spalte             | Bedeutung                                                                                              |
+|--------------------|-------------------------------------------------------------------------------------------------------|
+| **Rank**           | Platzierung innerhalb des Index-Rankings (1 = höchste relative Stärke).                                |
+| **Basiswert Name** | Vollständiger Name des Unternehmens bzw. der Aktie.                                                    |
+| **Ticker**         | Börsenkürzel (Symbol) der Aktie.                                                                       |
+| **RSL**            | Relative Stärke nach Levy = **Kurs ÷ gleitender Durchschnitt (SMA)**. Siehe Abschnitt 6.               |
+| **SMA**            | Wert des gewählten gleitenden Durchschnitts (z. B. SMA-26 auf Wochenbasis).                            |
+| **Preis**          | Aktueller Kurs (Schlusskurs) der Aktie.                                                                |
+| **Market Cap**     | Marktkapitalisierung in Milliarden US-Dollar (B = Billion/Mrd.).                                       |
+| **Volumen**        | Handelsvolumen in Millionen (M).                                                                       |
+| **Sektor**         | Branche/Sektor, dem die Aktie zugeordnet ist.                                                          |
+| **Börse**          | Handelsplatz der Aktie (NASDAQ oder NYSE).                                                             |
+
+---
+
+## 5. Filtereinstellungen
+
+| Filter                  | Standardwert                  | Bedeutung                                                                                                                                                  |
+|-------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SMA Perioden**        | **26**                        | Anzahl der Perioden für den gleitenden Durchschnitt. Auswahl: 10, 20, 26, 34, 50, 100, 200, 250.                                                          |
+| **SMA Einheit**         | **1W** (Woche)                | Zeiteinheit je Periode: `1D` = Tag, `1W` = Woche, `1M` = Monat. Beispiel: *SMA Perioden 26* + *Einheit 1W* = **SMA über 26 Wochen**.                       |
+| **Trend**               | **Aufwärtstrend (bullisch)**  | Suchrichtung. *Aufwärtstrend (bullisch)*: Kurs über dem SMA. *Abwärtstrend (bärisch)*: Kurs unter dem SMA.                                                 |
+| **Sektor**              | **Top-10 aller Sektoren**     | Ergebnismodus. *Top-10 aller Sektoren*: gemeinsame Rangliste über alle Sektoren. *Bester Basiswert pro Sektor*: die jeweils stärkste Aktie je Sektor.     |
+| **Index Ranking**       | **50**                        | Ein Basiswert erscheint nur, wenn er im Index unter den besten **N** Werten liegt. Je kleiner der Wert, desto strenger der Filter (Bereich 10–250).        |
+| **Schriftgröße**        | **11**                        | Schriftgröße der Ergebnistabellen (Bereich 9–20). Rein optische Einstellung.                                                                              |
+| **Debug-Logging**       | **aus**                       | Schreibt detaillierte Diagnoseinformationen in die Protokolldatei `screener-levy-rsl.log`. Nur für die Fehleranalyse erforderlich.                        |
+
+**Feste Auswahlkriterien** (nicht veränderbar): US-Aktien, deren Primärindex der S&P-500,
+NASDAQ-100 oder Dow Jones ist, gehandelt an NASDAQ oder NYSE, mit einer Marktkapitalisierung
+von **über 50 Mrd. USD**.
+
+> Mit **„Zurücksetzen“** stellen Sie alle Filter wieder auf die oben genannten Standardwerte ein.
+
+---
+
+## 6. Strategie richtig anwenden
+
+Die Standardeinstellungen (SMA-26 auf Wochenbasis, Aufwärtstrend, Top-10 aller Sektoren,
+Index Ranking 50) bilden die **Hauptstrategie** ab und sind für die meisten Anwender die
+richtige Wahl.
+
+### Die RSL-Kennzahl verstehen
+
+Die **Relative Stärke nach Levy (RSL)** ist das Verhältnis von Kurs zu gleitendem Durchschnitt:
+
+```
+RSL = Kurs ÷ SMA
+```
+
+| RSL-Wert         | Bedeutung                                                                                  |
+|------------------|--------------------------------------------------------------------------------------------|
+| **RSL > 1,0**    | **Aufwärtstrend (bullisch)** – der Kurs liegt über dem Durchschnitt.                        |
+| **RSL ≈ 1,0**    | **Seitwärtstrend** – keine klare Richtung. Die RSL-Strategie funktioniert hier **nicht**.  |
+| **RSL < 1,0**    | **Abwärtstrend (bärisch)** – der Kurs liegt unter dem Durchschnitt.                         |
+
+Zur Größenordnung: Ein bärischer Wert kann nur zwischen **0 und 1** liegen, ein bullischer Wert
+ist dagegen **theoretisch unbegrenzt** nach oben. Ein RSL von **0,5** entspricht somit einem
+Rückgang (Drawdown) von rund **50 %**, während ein RSL von **2,0** einer Aufwärtsbewegung von
+etwa **200 %** entspricht.
+
+### Empfehlungen zur Trendwahl
+
+- **Wählen Sie den Trend immer entsprechend dem übergeordneten (primären) Trend des
+  S&P-500-Index.**
+- **Verwenden Sie die bärische Strategie niemals, solange der Index bullisch ist.**
+- Liegt die RSL bei oder nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren
+  Signale.
+
+---
+
+*© 2026 Juergen Schranz – The DevOps Engineers · Lizenz: Apache License 2.0*
