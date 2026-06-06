@@ -192,7 +192,7 @@ etwa **100 %** der gewählten Zeitspanne des SMA entspricht. Bsp: SMA-26 (1W) si
 
 ### Das Ranking verstehen
 
-Die Zahl in der Spalte **"Rank"** gibt die aktuelle Position des Basiswertes (Aktie) im Index an. Im Index wird die relative Stärke (RSL) für **alle** Aktien berechnet und nach diesem sortiert. Bei gewähltem `Aufwärtstrend` wird der RSL-Wert abwärts sortiert. Bei gewählten `Abwärtstrend` in aufsteigender Folge. Somit ist die Nr. 1 der stärkste Trend in der jeweiligen Trendfolge.  
+Die Zahl in der Spalte **"Rank"** gibt die aktuelle Position des Basiswertes (Aktie) im Index an. Im Index wird die relative Stärke (RSL) für **alle** Aktien berechnet und nach diesem sortiert. Bei gewähltem `Aufwärtstrend` wird der RSL-Wert abwärts sortiert. Bei gewählten `Abwärtstrend` in aufsteigender Folge. Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge.  
 
 ### Empfehlungen zur Trendwahl
 
@@ -202,9 +202,9 @@ Die Zahl in der Spalte **"Rank"** gibt die aktuelle Position des Basiswertes (Ak
 - Liegt die RSL bei oder nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren
   Signale (siehe Kapitel "Trendstärke" oberhalb).
 
-### Anwendung der Strategie
+### Umsetzung der Strategie
 
-1. 
+Bitte folgen Sie der Anleitung, wie wir diese im Seminar gelernt haben. Danke.  
 
 ---
 
