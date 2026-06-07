@@ -1,0 +1,34 @@
+# IDE specific
+.venv/
+.venv*/
+.idea/
+.vscode/
+.worktrees/
+.prompts/
+.eggs/
+build/
+dist/
+eggs/
+target/
+var/
+wheels/
+#
+# project specific
+*.~
+*.bak
+*.egg
+*.log
+*.mo
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.so
+*.tmp
+*.manifest
+#
+# environment specific
+.DS_Store
+RemoteSystemsTempFiles/
+/tmp/
+/nohup.out
