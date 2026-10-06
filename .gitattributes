@@ -1,0 +1,44 @@
+# default behavior
+* text=auto
+
+# source files
+*.java   text eol=lf
+*.groovy text eol=lf
+*.py     text eol=lf
+*.js     text eol=lf
+*.ts     text eol=lf
+
+# resource files
+.*       text eol=lf
+*.env    text eol=lf
+*.json   text eol=lf
+*.txt    text eol=lf
+*.md     text eol=lf
+*.mmd    text eol=lf
+*.xml    text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.config text eol=lf
+*.pem    text eol=lf
+Dockerfile* text eol=lf
+
+# linux files
+*.sh     text eol=lf
+
+# windows files
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# native binaries
+*.ico    binary
+*.png    binary
+*.svg    binary
+*.pdf    binary
+*.docx   binary
+*.kdbx   binary
+*.tar    binary
+*.zip    binary
+*.exe    binary
+
+# exclusions: override previous rules
+# /lib/** binary
