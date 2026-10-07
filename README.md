@@ -26,7 +26,7 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/1.1.0>
 
 Der **RSL Momentum Screener** ist ein Desktop-Programm, mit dem Sie US-Aktien mit besonders
 starker **relativer Stärke** im Vergleich zu ihrem gleitenden Durchschnitt (SMA) finden können
-und die ein Momentum signalisieren. Grundlage ist die **Relative Stärke nach Levy (RSL)**.  
+und die ein Momentum signalisieren. Grundlage ist die **Relative Stärke nach Levy (RSL)** und **Historische Volatilität**.  
 
 Das Tool durchsucht die Aktien der großen US-Indizes **S&P-500**, **NASDAQ-100** und
 **Dow Jones**, berechnet für jede Aktie die Historische Volatilität, das Verhältnis von Kurs
@@ -59,8 +59,8 @@ Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
 
 | Plattform | Paketname                              |
 |-----------|----------------------------------------|
-| macOS     | `RSL-MomentumScreener-macos-arm.zip`   |
-| Windows   | `RSL-MomentumScreener-win-x86-64.zip`  |
+| [<img src="resources/images/download-macos.svg" width="140" alt="Download Momentum Screener for MacOS">](https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM) | [`RSL-MomentumScreener-macos-arm.zip`](https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM)   |
+| [<img src="resources/images/download-windows.svg" width="140" alt="Download Momentum Screener for MacOS">](https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM) | [`RSL-MomentumScreener-win-x86-64.zip`](https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM)  |
 
 ### 2.1 Installation MacOS (Apple Silicon / ARM)
 
