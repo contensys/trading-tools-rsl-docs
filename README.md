@@ -18,7 +18,8 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/1.1.0>
 4. Bedienung des Screener Tools
 5. Ergebnistabellen und Spaltenbeschreibung
 6. Filtereinstellungen
-7. Strategie richtig anwenden
+7. Berechnung der Top-10 und des Markttrends
+8. Strategie richtig anwenden
 
 ---
 
@@ -37,7 +38,7 @@ Zudem wird der primäre und sekundäre Markttrend des S&P-500 ermittelt.
 
 **Datenquelle**  
 
-Die Berechnung erfolgt live über die öffentliche TradingView- und Yahoo-Finance Datenbank. Es ist kein Konto und
+Die Berechnung erfolgt live von den öffentlichen TradingView- und Yahoo-Finance Datenbanken. Es ist kein Konto und
 keine Anmeldung erforderlich. Die Daten sind um 15 Minuten verzögert.  
 
 ---
@@ -111,7 +112,8 @@ Anwendung beendet.
 
 ### 4.1 Daten laden
 
-1. Der Screener startet mit den für die RSL Strategie passenden Filtereinstellungen. Diese können nach Wunsch nud Bedarf angepasst werden (siehe Abschnitt 5).
+1. Der Screener startet mit den für die RSL Strategie passenden Filtereinstellungen.
+   Diese können nach Wunsch und Bedarf angepasst werden (siehe Abschnitt 6).
 2. Auf **„Aktien suchen/aktualisieren“** klicken.
 3. Der Text des Buttons ändert sich in *⏰ Aktualisiere Daten* während die Daten geladen werden und
    es wird der Ladestatus für jeden Datenbereich angezeigt. Die Information wird am Ende automatisch
@@ -121,20 +123,10 @@ Anwendung beendet.
    und wieviele Basiswerte in der Tabelle angezeigt werden.  
    z.B. *„2026-10-07 04:20:30 | 50 Aktien gefilter für RSL, 350 im Trend aus 507 Aktien im Index.“*.  
 
-### 4.2 Auswahl der Basiswerte (Filter Kriterien)
-
-Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeigt.  
-
-- Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.
-- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein.
-- In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
-- Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
-- Der RSL-Wert des Basiswertes muss in den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
-
 > ℹ️ **Wichtig:** Nach **jeder** Änderung an den Filtereinstellungen müssen Sie erneut auf
 > **„Aktien suchen/aktualisieren“** klicken, damit die Tabellen aktualisiert werden.
 
-### 4.3 Schaltflächen
+### 4.2 Schaltflächen
 
 | Schaltfläche                  | Funktion                                                                |
 |:------------------------------|:------------------------------------------------------------------------|
@@ -154,8 +146,8 @@ Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeig
 | **Rank**           | Platzierung innerhalb des Index-Rankings (1 = höchste relative Stärke, bei Abwärtstrend die schwächste Stärke). |
 | **Basiswert Name** | Vollständiger Name des Unternehmens bzw. der Aktie.                                                    |
 | **Ticker**         | Börsenkürzel (Symbol) der Aktie.                                                                       |
-| **RSL**            | Relative Stärke nach Levy = **Kurs ÷ gleitender Durchschnitt (SMA)**. Siehe Abschnitt 6.               |
-| **HV**             | Historische Volatilität nach Levy = **Standardabweichung der letzten 26 Wochen**. Siehe Abschnitt 6.   |
+| **RSL**            | Relative Stärke nach Levy = **Kurs ÷ gleitender Durchschnitt (SMA)**. Siehe Abschnitt 7 und 8.         |
+| **HV**             | Historische Volatilität nach Levy = **Standardabweichung der letzten 26 Wochen**. Siehe Abschnitt 7.   |
 | **SMA**            | Wert des gewählten gleitenden Durchschnitts (z. B. SMA-26 auf Wochenbasis).                            |
 | **Preis**          | Aktueller Kurs (Schlusskurs) der Aktie.                                                                |
 | **Market Cap**     | Marktkapitalisierung in Milliarden US-Dollar (B = Billion (Englisch)).                                 |
@@ -171,10 +163,9 @@ Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeig
 |-------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **SMA Perioden**        | **26**                        | Anzahl der Perioden für den gleitenden Durchschnitt. Auswahl: 10, 20, 26, 34, 50, 100, 200, 250.                                                          |
 | **SMA Einheit**         | **1W** (Woche)                | Zeiteinheit je Periode: `1D` = Tag, `1W` = Woche, `1M` = Monat. Beispiel: *SMA Perioden 26* + *Einheit 1W* = **SMA über 26 Wochen**.                       |
-| **Trend**               | **Aufwärtstrend (bullisch)**  | Suchrichtung. *Aufwärtstrend (bullisch)*: Kurs über dem SMA. *Abwärtstrend (bärisch)*: Kurs unter dem SMA.                                                 |
-| **Sektor**              | **Top-10 aller Sektoren**     | Ergebnismodus. *Top-10 aller Sektoren*: gemeinsame Rangliste über alle Sektoren. *Bester Basiswert pro Sektor*: die jeweils stärkste Aktie je Sektor.     |
-| **Index Ranking**       | **50**                        | Ein Basiswert erscheint nur, wenn er im Index unter den besten **N** Werten liegt. Je kleiner der Wert, desto strenger der Filter (Bereich 10–250).        |
-| **Schriftgröße**        | **10**                        | Schriftgröße der Ergebnistabellen (Bereich 9–20). Rein optische Einstellung.                                                                              |
+| **Index Ranking**       | **50**                        | Es werden nur Basiswerte in der Auswahl berücksichtigt, die niedriger als dieser Wert ist. Die Top-10 müssen in der Rangliste unterhalb der Hälfte dieses Wertes liegen. (Bereich 10–250). |
+| **Marktkapitalisierung** | **50**                       | Ein Basiswert wird für die Top-10 selektiert, wenn die Marktkapitalisierung über diesem Wert liegt. (Bereich 1–100). |
+| **Schriftgröße**        | **11**                        | Schriftgröße der Ergebnistabelle und Markttrend Bericht. (Schritfgrößen 9–20)                                                                              |
 | **Debug-Logging**       | **aus**                       | Schreibt detaillierte Diagnoseinformationen in die Protokolldatei `screener-levy-rsl.log`. Nur für die Fehleranalyse erforderlich.                        |
 
 **Feste Auswahlkriterien** (nicht veränderbar): US-Aktien, deren Primärindex der S&P-500,
@@ -185,7 +176,21 @@ von **über 50 Mrd. USD**.
 
 ---
 
-## 7. Strategie richtig anwenden
+### 7 Berechnung der Top-10 und des Markttrends
+
+**Auswahl der Basiswerte (Filter Kriterien)**  
+
+Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeigt.  
+
+- Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.
+- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein.
+- In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
+- Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
+- Der RSL-Wert des Basiswertes muss in den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
+
+---
+
+## 8. Strategie richtig anwenden
 
 Die Standardeinstellungen (SMA-26 auf Wochenbasis, Aufwärtstrend, Top-10 aller Sektoren,
 Index Ranking 50) bilden die **Hauptstrategie** ab und sind für die meisten Anwender die
