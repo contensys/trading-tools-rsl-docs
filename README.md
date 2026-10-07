@@ -10,15 +10,15 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/1.1.0>
 > Entscheidungen oder Verluste, die aus der Nutzung dieses Tools resultieren. Konsultieren Sie
 > immer einen professionellen Finanzberater, bevor Sie Anlageentscheidungen treffen.
 
-**Inhalt**
+**Inhalt**  
 
 1. Überblick und Zweck
 2. Installation
-3. Bedienung des Screener Tools
-4. Ergebnistabellen und Spaltenbeschreibung
-5. Filtereinstellungen
-6. Strategie richtig anwenden
-
+3. Key Features
+4. Bedienung des Screener Tools
+5. Ergebnistabellen und Spaltenbeschreibung
+6. Filtereinstellungen
+7. Strategie richtig anwenden
 
 ---
 
@@ -35,14 +35,6 @@ einem Ampelsignal markiert.
 
 Zudem wird der primäre und sekundäre Markttrend des S&P-500 ermittelt.  
 
-**Filter Kriterien**  
-
-- Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.
-- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein.
-- In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
-- Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
-- Der RSL-Wert des Basiswertes muss in den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
-
 **Datenquelle**  
 
 Die Berechnung erfolgt live über die öffentliche TradingView- und Yahoo-Finance Datenbank. Es ist kein Konto und
@@ -50,11 +42,11 @@ keine Anmeldung erforderlich. Die Daten sind um 15 Minuten verzögert.
 
 ---
 
-## 2. Installation
+## 2. Installation ![Release](https://img.shields.io/badge/release-latest-green)
 
 Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
 
-➡️ **Download:** ![Static Badge](https://img.shields.io/badge/release-latest-green)  
+➡️ **Download:**  
 <https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM>
 
 | Plattform | Paketname                              |
@@ -109,57 +101,71 @@ Diese Bestätigung ist nur beim ersten Start erforderlich.
 
 ---
 
-## 3. Bedienung des Screener Tools
+## 4. Bedienung des Screener Tools
 
 Nach dem Start erscheint zunächst ein **Lizenz-/Hinweisfenster (About / Lizenz)**. Mit **„OK“**
 bestätigen Sie die Nutzungsbedingungen und gelangen in die Anwendung. Mit **„Cancel“** wird die
 Anwendung beendet.  
 
-<img src="resources/images/rsl-screener-window.png" width="720" alt="RSL Momentum Screener Window">
+<img src="resources/images/rsl-screener-window.png" width="800" alt="RSL Momentum Screener Window">
 
-### 3.1 Daten laden
+### 4.1 Daten laden
 
 1. Der Screener startet mit den für die RSL Strategie passenden Filtereinstellungen. Diese können nach Wunsch nud Bedarf angepasst werden (siehe Abschnitt 5).
 2. Auf **„Aktien suchen/aktualisieren“** klicken.
-3. In der Statuszeile erscheint zunächst *„Lade Daten, bitte um etwas Geduld...“*, danach die
-   Anzahl der gefundenen Aktien (z. B. *„42 Aktien von 507 Indexeinträgen gefunden.“*).
-4. Die Ergebnisse werden in den beiden Tabellen **Top 10** und **Positionen 11–20** angezeigt.
+3. Der Text des Buttons ändert sich in *⏰ Aktualisiere Daten* während die Daten geladen werden und
+   es wird der Ladestatus für jeden Datenbereich angezeigt. Die Information wird am Ende automatisch
+   ausgeblendet.  
+4. Die Ergebnisse werden in den der Tabellen aufgelistet.
+5. In der Statuszeile wird das Datum der letzten Aktualisierung angezeigt, die Anzahl gefilterten Basiswerte
+   und wieviele Basiswerte in der Tabelle angezeigt werden.  
+   z.B. *„2026-10-07 04:20:30 | 50 Aktien gefilter für RSL, 350 im Trend aus 507 Aktien im Index.“*.  
+
+### 4.2 Auswahl der Basiswerte (Filter Kriterien)
+
+Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeigt.  
+
+- Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.
+- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein.
+- In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
+- Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
+- Der RSL-Wert des Basiswertes muss in den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
 
 > ℹ️ **Wichtig:** Nach **jeder** Änderung an den Filtereinstellungen müssen Sie erneut auf
 > **„Aktien suchen/aktualisieren“** klicken, damit die Tabellen aktualisiert werden.
 
-> ⏳ **Geduld bei „Bester Basiswert pro Sektor“:** In diesem Modus wird jeder Sektor einzeln
-> durchsucht. Die Abfrage dauert daher deutlich länger als die Standard-Suche.
+### 4.3 Schaltflächen
 
-### 3.2 Schaltflächen
-
-| Schaltfläche                  | Funktion                                                              |
-|-------------------------------|----------------------------------------------------------------------|
+| Schaltfläche                  | Funktion                                                                |
+|:------------------------------|:------------------------------------------------------------------------|
 | **Aktien suchen/aktualisieren** | Lädt bzw. aktualisiert die Ergebnisse anhand der Filtereinstellungen. |
-| **Zurücksetzen**              | Setzt alle Filter auf die Standardwerte zurück und leert die Tabellen.|
-| **Schließen**                 | Beendet die Anwendung.                                                |
-| **About / Lizenz**            | Zeigt die Lizenz- und Hinweisinformationen an.                 |
+| **Zurücksetzen**              | Setzt alle Filter auf die Standardwerte zurück und leert die Tabellen.  |
+| **Schließen**                 | Beendet die Anwendung. |
+| **Neue Version verfügbar**    | Diese Schaltfläche wird eingeblendet, wenn eine neue Version verfügbar ist. |
+| **Benutzerhandbuch (Online)** | Dieses Benutzerhandbuch. |
+| **About / Lizenz**            | Zeigt die Lizenz- und Hinweisinformationen an. |
 
 ---
 
-## 4. Die Ergebnistabellen – Spaltenbeschreibung
+## 5. Die Ergebnistabellen – Spaltenbeschreibung
 
 | Spalte             | Bedeutung                                                                                              |
-|--------------------|-------------------------------------------------------------------------------------------------------|
+|--------------------|--------------------------------------------------------------------------------------------------------|
 | **Rank**           | Platzierung innerhalb des Index-Rankings (1 = höchste relative Stärke, bei Abwärtstrend die schwächste Stärke). |
 | **Basiswert Name** | Vollständiger Name des Unternehmens bzw. der Aktie.                                                    |
 | **Ticker**         | Börsenkürzel (Symbol) der Aktie.                                                                       |
 | **RSL**            | Relative Stärke nach Levy = **Kurs ÷ gleitender Durchschnitt (SMA)**. Siehe Abschnitt 6.               |
+| **HV**             | Historische Volatilität nach Levy = **Standardabweichung der letzten 26 Wochen**. Siehe Abschnitt 6.   |
 | **SMA**            | Wert des gewählten gleitenden Durchschnitts (z. B. SMA-26 auf Wochenbasis).                            |
 | **Preis**          | Aktueller Kurs (Schlusskurs) der Aktie.                                                                |
-| **Market Cap**     | Marktkapitalisierung in Milliarden US-Dollar (B = Billion/Mrd.).                                       |
+| **Market Cap**     | Marktkapitalisierung in Milliarden US-Dollar (B = Billion (Englisch)).                                 |
 | **Volumen**        | Handelsvolumen in Millionen (M).                                                                       |
-| **Sektor**         | Sektor, dem die Aktie zugeordnet ist.                                                          |
+| **Sektor**         | Sektor, dem die Aktie zugeordnet ist.                                                                  |
 | **Börse**          | Handelsplatz der Aktie (NASDAQ oder NYSE).                                                             |
 
 ---
 
-## 5. Filtereinstellungen
+## 6. Filtereinstellungen
 
 | Filter                  | Standardwert                  | Bedeutung                                                                                                                                                  |
 |-------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -179,7 +185,7 @@ von **über 50 Mrd. USD**.
 
 ---
 
-## 6. Strategie richtig anwenden
+## 7. Strategie richtig anwenden
 
 Die Standardeinstellungen (SMA-26 auf Wochenbasis, Aufwärtstrend, Top-10 aller Sektoren,
 Index Ranking 50) bilden die **Hauptstrategie** ab und sind für die meisten Anwender die
