@@ -1,8 +1,8 @@
 # RSL Momentum Screener – Benutzerhandbuch
 
-**Relative Stärke nach Levy (RSL)** · Version 1.0
+**Relative Stärke nach Levy (RSL)** · Version 1.1
 
-Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release/1.0.0>
+Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/1.1.0>
 
 > **Haftungsausschluss:** Dieses Tool dient ausschließlich Bildungs- und Forschungszwecken.
 > Es stellt **keine Anlageberatung** dar, und es werden keine Anlageempfehlungen gegeben.
@@ -25,26 +25,27 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release
 ## 1. Überblick und Zweck
 
 Der **RSL Momentum Screener** ist ein Desktop-Programm, mit dem Sie US-Aktien mit besonders
-starker oder besonders schwacher **relativer Stärke** im Vergleich zu ihrem gleitenden
-Durchschnitt (SMA) auffinden können. Grundlage ist die **Relative Stärke nach Levy (RSL)**.
+starker **relativer Stärke** im Vergleich zu ihrem gleitenden Durchschnitt (SMA) finden können
+und die ein Momentum signalisieren. Grundlage ist die **Relative Stärke nach Levy (RSL)**.  
 
 Das Tool durchsucht die Aktien der großen US-Indizes **S&P-500**, **NASDAQ-100** und
-**Dow Jones**, berechnet für jede Aktie das Verhältnis von Kurs zu gleitendem Durchschnitt und
-zeigt die stärksten (bzw. schwächsten) Werte als Rangliste an:
+**Dow Jones**, berechnet für jede Aktie die Historische Volatilität, das Verhältnis von Kurs
+zu gleitendem Durchschnitt und erstellt eine Rangliste. Die stärksten Basiswerte werden mit
+einem Ampelsignal markiert.  
 
-- **Top 10** – die zehn Basiswerte mit der höchsten relativen Stärke
-- **Positionen 11–20** – die nächsten zehn Werte der Rangliste
+Zudem wird der primäre und sekundäre Markttrend des S&P-500 ermittelt.  
 
 **Filter Kriterien**  
 
-- Der letzte **Schlußkurs** muss höher als der konfigurierte SMA sein. (Bei Abwärtstrend, niedriger) 
-- Die **Marktkapitalisierung** ist gerößer als 50 Mrd US$
+- Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.
+- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein.
+- In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
 - Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
 - Der RSL-Wert des Basiswertes muss in den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
 
-**Datenquelle**
+**Datenquelle**  
 
-Die Berechnung erfolgt live über die öffentliche TradingView-Datenbank. Es ist kein Konto und
+Die Berechnung erfolgt live über die öffentliche TradingView- und Yahoo-Finance Datenbank. Es ist kein Konto und
 keine Anmeldung erforderlich. Die Daten sind um 15 Minuten verzögert.  
 
 ---
@@ -53,7 +54,8 @@ keine Anmeldung erforderlich. Die Daten sind um 15 Minuten verzögert.
 
 Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
 
-➡️ **Download:** <https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM>
+➡️ **Download:** ![Static Badge](https://img.shields.io/badge/release-latest-green)  
+<https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM>
 
 | Plattform | Paketname                              |
 |-----------|----------------------------------------|
@@ -86,6 +88,24 @@ zunächst blockieren. Das ist normal und kein Hinweis auf Schadsoftware.
    - Anschließend auf **„Trotzdem ausführen“ (Run anyway)** klicken.
 
 Diese Bestätigung ist nur beim ersten Start erforderlich.
+
+---
+
+## 3. Key Features
+
+- **Ampelfarben:** Die Top-10 werden mit Emojis markiert. (✅, ⚠️, 🔴)
+- **Exit Signal:** Alle Basiswerte innerhalb des Top-n Rangliste werden markiert. (💿) Positionen außerhalb der Top-n Rangliste werden verkauft.
+- **Relative Stärke nach Levy:** Der RSL Indikator wird für alle Basiswerte des Index berechnet.
+- **Historische Volatilität:** Berechnung der Historischen Volatilität nach Levy zur Ermittlung des Momentum.
+- **Rangliste:** Es wird eine Rangliste 1..n über alle Basiswerte des Index erstellt.
+- **Markttrend Bewertung:** Es wird der primäre Trend der letzten 26 Wochen und sekundäre Trend der letzten 30 Tage berechnet. Das Ergebnise wird mithilfe von Ampelfarben und Trendrichtung angezeigt (Bullisch, Bärisch, Uptrend, Downtrend und Mixed).
+- **Selektive Auswahl Basiswerte:** Es werden die alle relevanten Basiswerte des Index ermittelt und aufgelistet. Die Liste enthält alle Basiswerte, die über dem Median der Historischen Volatilität liegen oder einen RSL > 1,0 haben.
+- **Sortieren:** Alle Spalten der Tabelle können per Mausklick aufsteigend und absteigend sortiert werden.
+- **Suchen und Filter:** Basiswerte können durch einfache Eingabe des Tickers gesucht und gefiltert werden.
+- **Filtereinstellungen:** Die Marktkapitalisierung, die Anzahl der Rangliste, der Zeitraum (Perioden) und die Zeiteinheit (Tage, Wochen, Monate) kann bei Bedarf geändert werden. Mit einem Knopfdruck können die empfohlenen Standardeinstellungen wiederhergestellt werden.
+- **Schnelles Laden:** Die Daten werden für 15 Minuten gespeichert. Danach werden diese neue geladen und neu berechnet. So können unterschiedliche Perioden und Einheiten geladen werden und schnell wieder zurück wechseln. Zudem werden die maximalen Abfragelimits geschont.
+- **Fehlerbehandlung:** Schwerwiegende Fehler werden in Deutsch angezeigt. Darunter sind auch "Abfrage Einschränkungen", "Verbindungsfehler", "Berechnungsfehler" u.v.m.
+- **Schriftgröße:** Die Schriftgröße der Basiswert Tabelle und Markttrendbewertung kann geändert werden. Die Größe der App wird automatisch angepasst.
 
 ---
 
