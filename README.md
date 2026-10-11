@@ -65,7 +65,7 @@ zusätzliche Sicherheitswarnungen gestartet werden.
 2. Die App **`RSL-MomentumScreener.app`** an einen in den Ordner **`/Programme` (/Applications)**.
 3. App per Doppelklick starten.
 
-> ⚠️ **Wichtige Einschränkung:** Starten Sie die App **nicht direkt aus dem Ordner „Downloads“**.
+> ⚠️ **Hinweis:** Starten Sie die App **nicht direkt aus dem Ordner „Downloads“**.
 > MacOS führt Programme aus dem Download-Ordner in einer eingeschränkten Umgebung aus, wodurch
 > die App nicht korrekt funktioniert. Verschieben Sie die App vorher in den Ordner „Programme“.
 
