@@ -183,10 +183,11 @@ von **über 50 Mrd. USD**.
 Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeigt.  
 
 - Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.
-- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein.
+- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein (RSA > 1,0).
 - In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
-- Der Basiswert muss in den oben genannte **Indexes primär gelistet** sein
-- Der RSL-Wert des Basiswertes muss in den **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
+- Der Basiswert muss in den oben genannten **Indexes primär gelistet** sein
+- Der RSL-Wert des Basiswertes muss in der Rangliste der **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
+- In den Top-10 werden nur Werte mit einem RSA > 1,0 und < 1,8 gewählt. Basiswerte mit RSA > 1,8 werden als Sicherheits-Leitplanken gegen Überhitzung (Blasen) und vor Trendumkehr bewusst rausgefiltert.
 
 ---
 
@@ -196,11 +197,40 @@ Die Standardeinstellungen (SMA-26 auf Wochenbasis, Aufwärtstrend, Top-10 aller 
 Index Ranking 50) bilden die **Hauptstrategie** ab und sind für die meisten Anwender die
 richtige Wahl.
 
+### Den Markttrend prüfen
+
+Die **RSL Momentum** Stratgie erfordert immer mit dem Trend zu handeln. Hierzu ermitteln wir zusätzich zur Stärke jeder einzelenen Positionen insbesondere auch den Trend des gesamten Marktes. Dies erhöht die Wahrscheinlichkeit erfolreich zu sein.
+
+#### Zwei Marktrends
+
+Wir unterscheiden zwischen dem primären und sekundären Trend.
+
+| Trend | Zeitraum | Beschreibung |
+| :--- | :--- | :--- |
+| **Primär** | 26 Wochen | Der 26-Wochen-Trend des S&P 500 bestimmt die **grundlegende Fahrtrichtung des Portfolios** (Investiert vs. Cash).<br/>**Die Bedingung**: Der letzte ermittelte Kurs des S&P 500 muss über seinem gleitenden 26-Wochen-Durchschnitt notieren.<br/>**Die Funktion**: Dieser Filter schützt Sie vor Systemkrisen. Befindet sich der S&P 500 unter dieser Linie, befindet sich der Gesamtmarkt im Bärenmarkt.<br/>**Die Konsequenz**: Kaufsignale für Einzelaktien werden **vollständig blockiert**, bestehende Positionen werden je nach Regelwerk schrittweise abgebaut oder eingefroren. Das Portfolio wechselt in Cash oder andere Asset Klasse. |
+| **Sekundär** | 30 Tage | Der sekundäre Trend dient als **Timing-Instrument** und verhindert, dass Sie mitten in eine kurzfristige Marktkorrektur hineinkaufen.<br/>**Die Bedingung**: Der Durchschnittskurs des S&P 500 der letzten 30 Tage muss höher sein als der Durchschnittskurs der vorangegangenen 30 Tage (bzw. der aktuelle Kurs liegt über dem 30-Tage-Schnitt).<br/>**Die Funktion**: Selbst in einem intakten Bullenmarkt (primärer Trend positiv) gibt es immer wieder wochenlange Korrekturen. Würden Sie hier blind Aktien nachkaufen, greifen Sie oft in ein fallendes Messer.<br/>**Die Konsequenz**: Nur wenn der sekundäre Trend anzeigt, dass sich der S&P 500 kurzfristig wieder **stabilisiert oder nach oben dreht**, wird das grüne Licht für neue Aktienkäufe freigegeben. |
+
+#### Das Ampelsystem des Markttrends
+
+In der Praxis der Momentum-Strategie werden diese beiden Markttrends zu einem hocheffizienten Filter verknüpft:
+
+| Primärtrend | Sekundärtrend | Marktzustand | Strategische Position im Depot |
+| :--- | :--- | :--- | :--- |
+| ✅ ▲ Bullisch | ✅ **Uptrend**<br/>(>80% oberhalb SMA) | Voller Bullenmarkt | **Grünes Licht**: Volle Investition. Neue Top-10-Aktien werden gekauft. |
+| ✅ ▲ Bullisch | ⚠️ Mixed<br/>(>50% oberhalb SMA) | Gesunde Korrektur | **Gelbes Licht**: Bestehende Aktien halten. Keine Neukäufe (Cash aufbauen). |
+| 🔴 ▼ Bärisch | 🔴 Downtrend | Bärenmarkt / Crash | **Rotes Licht**: Keine Käufe. Konsequente Absicherung / Liquidität. |
+
+**Warum ist der Markttrend für die Top-10-Auswahl so wichtig?**  
+
+Aktien mit hoher historischer Volatilität (oberhalb des Medians) besitzen ein hohes "Beta". Das bedeutet: Sie steigen im Bullenmarkt viel schneller als der Markt – sie fallen im Bärenmarkt aber auch drastisch schneller.  
+
+Ohne die Prüfung des primären und sekundären Markttrends würde die RSL-Strategie Sie in einer Korrektur genau in die Aktien zwingen, die am stärksten einbrechen. Der Gesamtmarkt-Filter sorgt dafür, dass Sie das Gaspedal nur dann durchdrücken, wenn der Markt echten Rückenwind hat.  
+
 ### Die RSL-Kennzahl verstehen
 
 Die **Relative Stärke nach Levy (RSL)** ist das Verhältnis von Kurs zu gleitendem Durchschnitt:
 
-```
+```text
 RSL = Kurs ÷ SMA
 ```
 
@@ -212,23 +242,18 @@ RSL = Kurs ÷ SMA
 
 #### Zur Trendstärke
 
-Je näher der RSL-Wert an 1,0 liegt, desto schwächer der Trend und folgedessen wird man im Basiswert länger investiert sein. Ich empfehle in Werte mit einem Trend von mehr als 10% zu investieren (>1,10 bei Aufwärtstrends oder <0,90 bei Abwärtstrend).
+Je näher der RSL-Wert an 1,0 liegt, desto schwächer der Trend und folgedessen wird man im Basiswert länger investiert sein. Ich empfehle in Werte mit einem Trend zwischen 10% und 80% zu investieren (1,10 < RSA < 1,80).
 
 #### Zur Größenordnung
 
-Ein bärischer Wert kann nur zwischen **0 und 1** liegen, ein bullischer Wert
-ist dagegen **theoretisch unbegrenzt** nach oben möglich. Ein RSL von **0,5** entspricht somit einem
-Rückgang (Drawdown) von rund **50 %**, während ein RSL von **2,0** einer Aufwärtsbewegung von
-etwa **100 %** der gewählten Zeitspanne des SMA entspricht. Bsp: SMA-26 (1W) sind somit eine Zeitspanne von 26 Wochen.
+Ein bärischer Wert kann nur zwischen **0 und 1** liegen, ein bullischer Wert ist dagegen **theoretisch unbegrenzt** nach oben möglich. Ein RSL von **0,5** entspricht somit einem Rückgang (Drawdown) von rund **50 %**, während ein RSL von **2,0** einer Aufwärtsbewegung von etwa **100 %** der gewählten Zeitspanne des SMA entspricht.
 
 ### Das Ranking verstehen
 
-Die Zahl in der Spalte **"Rank"** gibt die aktuelle Position des Basiswertes (Aktie) im Index an. Im Index wird die relative Stärke (RSL) für **alle** Aktien berechnet und nach diesem sortiert. Bei gewähltem `Aufwärtstrend` wird der RSL-Wert abwärts sortiert. Bei gewählten `Abwärtstrend` in aufsteigender Folge. Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge.  
+Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie) im Index an. Im Index wird die relative Stärke (RSL) für **alle** Aktien berechnet und nach diesem sortiert. Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge.  
 
 ### Empfehlungen zur Trendwahl
 
-- **Wählen Sie den Trend immer entsprechend dem übergeordneten (primären) Trend des
-  S&P-500-Index.**
 - **Handeln Sie diese Strategie niemals gegen den Trend. Verwenden Sie die bärische Strategie nicht, solange der Index im Bullenmarkt befindet.**
 - Liegt die RSL bei oder nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren
   Signale (siehe Kapitel "Trendstärke" oberhalb).
@@ -236,6 +261,16 @@ Die Zahl in der Spalte **"Rank"** gibt die aktuelle Position des Basiswertes (Ak
 ### Umsetzung der Strategie
 
 Bitte folgen Sie der Anleitung, wie wir diese im Seminar gelernt haben. Danke.  
+
+#### Die Kaufregel (Einstieg)
+
+- **Aktion**: Es werden strikt die Plätze mit ✅ gekennzeichneten gekauft. Basiswerte werden mit ⚠️ gekennzeichnet, wenn der RSA > 1,8 liegt oder der sekundäre Markttrend mit "Mixed" bewertet ist. Diese Basiswerte können sie optional je nach Risikobereitschaft gekauft werden. Das Kapital wird exakt zu gleichen Teilen (je 10 %) aufgeteilt.
+
+#### Die Trägheitsregel / Verkaufsregel (Ausstieg)
+
+- **Problem**: Fällt die Aktie von Platz 10 auf Platz 11, würde ein sofortiger Verkauf enorme Transaktionskosten verursachen.
+- **Lösung** nach Levy: Eine Aktie wird **nicht** sofort verkauft, wenn sie aus den Top 10 rutscht. Sie wird so lange im Depot gehalten, wie sie sich in der erweiterten Spitzengruppe - mit 💿 gekennzeichnet - der qualifizierten Liste aufhält.
+- **Verkaufssignal**: Erst wenn die Aktie nicht mehr mit 💿 gekennzeichnet ist (keine Markierung hat), wird sie verkauft. Der frei gewordene Platz wird durch den nächstbesten Aufsteiger aus den Top 10 besetzt, den man noch nicht besitzt.
 
 ---
 
