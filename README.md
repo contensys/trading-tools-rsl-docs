@@ -2,7 +2,7 @@
 
 **Relative Stärke nach Levy (RSL)** · Version 1.1
 
-Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/1.1.0>
+Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release/1.1>
 
 > **Haftungsausschluss:** Dieses Tool dient ausschließlich Bildungs- und Forschungszwecken.
 > Es stellt **keine Anlageberatung** dar, und es werden keine Anlageempfehlungen gegeben.
@@ -12,14 +12,12 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/1.1.0>
 
 **Inhalt**  
 
-1. Überblick und Zweck
-2. Installation
-3. Key Features
-4. Bedienung des Screener Tools
-5. Ergebnistabellen und Spaltenbeschreibung
-6. Filtereinstellungen
-7. Berechnung der Top-10 und des Markttrends
-8. Strategie richtig anwenden
+1. [Überblick und Zweck](#1-überblick-und-zweck)
+2. [Installation](#2-installation-release)
+3. [Key Features](#3-key-features)
+4. [Bedienung des Screener Tools](#4-bedienung-des-screener-tools)
+5. [Berechnung der Top-10 und des Markttrends](#5-berechnung-der-top-10-und-des-markttrends)
+6. [Strategie richtig anwenden](#6-strategie-richtig-anwenden)
 
 ---
 
@@ -108,9 +106,9 @@ Nach dem Start erscheint zunächst ein **Lizenz-/Hinweisfenster (About / Lizenz)
 bestätigen Sie die Nutzungsbedingungen und gelangen in die Anwendung. Mit **„Cancel“** wird die
 Anwendung beendet.  
 
-<img src="resources/images/rsl-screener-window.png" width="800" alt="RSL Momentum Screener Window">
+<img src="resources/images/rsl-screener-window_howto.png" width="800" alt="RSL Momentum Screener Window">
 
-### 4.1 Daten laden
+### 4.1 Daten laden 5️⃣
 
 1. Der Screener startet mit den für die RSL Strategie passenden Filtereinstellungen.
    Diese können nach Wunsch und Bedarf angepasst werden (siehe Abschnitt 6).
@@ -126,7 +124,7 @@ Anwendung beendet.
 > ℹ️ **Wichtig:** Nach **jeder** Änderung an den Filtereinstellungen müssen Sie erneut auf
 > **„Aktien suchen/aktualisieren“** klicken, damit die Tabellen aktualisiert werden.
 
-### 4.2 Schaltflächen
+### 4.2 Schaltflächen 5️⃣
 
 | Schaltfläche                  | Funktion                                                                |
 |:------------------------------|:------------------------------------------------------------------------|
@@ -139,15 +137,30 @@ Anwendung beendet.
 
 ---
 
-## 5. Die Ergebnistabellen – Spaltenbeschreibung
+### 4.3 Der Markttrend 1️⃣2️⃣
+
+Eine detailierte Beschreibung finden Sie in Kapitel 6.1 unter "Die Strategie richtig anwenden".  
+
+| Spalte | Zeile 1️⃣ | Zeile 2️⃣ |
+| :--- | :--- | :--- |
+| **Trendtyp** | In Zeile 1 wird der **primäre Trend** der letzte 26 Wochen oder der Filtereinstellung angezeigt | In Zeile 2 wird der **sekundäre Trend** der letzten 30 Tage angezeigt |
+| **Indikator** | Der Bewertungszeitraum |
+| **Kurs** | Der letzte Schlußkurs des Bewertungszeitraums |
+| **Datum** | Das Datum des letzten Schlußkurses |
+| **Trend** | Die Richtung des Trends ▲ Bullisch (aufwärts) oder ▼ Bärisch (abwärts)<br/>Es wird die Quote [%] über die Anzahl der Schlußkurse über dem wöchentlichen SMA-26 liegen (oder dessen Auswahl) | Der Trend kann Uptrend (aufwärts), unklar (Mixed) oder Downtrend (abwärts) sein<br/>Die Quote [%] über die Anzahl täglichen Schlußkurse über SMA-30 bestimmt den Trend: >80% = Uptrend, >50% = Mixed, <50% = Downtrend |
+| **Details** | Die Punkte und Prozent des Schlußkurses über oder unter dem SMA-26 (oder Filterauswahl) | Der niedrigste, durschnitt und höchste Kurs in den letzten 30 Tagen. |
+
+---
+
+### 4.4 Die Ergebnistabelle – Spaltenbeschreibung 3️⃣
 
 | Spalte             | Bedeutung                                                                                              |
 |--------------------|--------------------------------------------------------------------------------------------------------|
 | **Rank**           | Platzierung innerhalb des Index-Rankings (1 = höchste relative Stärke, bei Abwärtstrend die schwächste Stärke). |
 | **Basiswert Name** | Vollständiger Name des Unternehmens bzw. der Aktie.                                                    |
 | **Ticker**         | Börsenkürzel (Symbol) der Aktie.                                                                       |
-| **RSL**            | Relative Stärke nach Levy = **Kurs ÷ gleitender Durchschnitt (SMA)**. Siehe Abschnitt 7 und 8.         |
-| **HV**             | Historische Volatilität nach Levy = **Standardabweichung der letzten 26 Wochen**. Siehe Abschnitt 7.   |
+| **RSL**            | Relative Stärke nach Levy = **Kurs ÷ gleitender Durchschnitt (SMA)**. Siehe Abschnitt 6.         |
+| **HV**             | Historische Volatilität nach Levy = **Standardabweichung der letzten 26 Wochen**. Siehe Abschnitt 6.   |
 | **SMA**            | Wert des gewählten gleitenden Durchschnitts (z. B. SMA-26 auf Wochenbasis).                            |
 | **Preis**          | Aktueller Kurs (Schlusskurs) der Aktie.                                                                |
 | **Market Cap**     | Marktkapitalisierung in Milliarden US-Dollar (B = Billion (Englisch)).                                 |
@@ -157,16 +170,28 @@ Anwendung beendet.
 
 ---
 
-## 6. Filtereinstellungen
+### 4.5 Suchen und Sortieren 3️⃣
+
+**Suchen/Filtern**  
+Die Suche funktioniert wie ein Filter. In der Tabelle einfach mit dem Tippen von Zeichen beginnen und die Liste wird nach dem *Ticker* gefiltert.
+Der Filter kann mit der **Escape-Taste** aufgehoben oder einzelne Zeichen mit **Rücktaste** (Backspace) entfernt werden.
+
+**Sortieren**  
+Zum Sortieren auf die jeweilige Spaltenüberschrift in der Tabelle klicken. Mit einem zweiten Klick wird die Sortierung umgedreht.  
+Mit einem Klick auf die Spalte ganz links über den Symbolen wird die ursprüngliche Sortierung der Top-10 Werte wiederhergestellt.  
+
+---
+
+### 4.6 Filtereinstellungen 4️⃣6️⃣
 
 | Filter                  | Standardwert                  | Bedeutung                                                                                                                                                  |
 |-------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **SMA Perioden**        | **26**                        | Anzahl der Perioden für den gleitenden Durchschnitt. Auswahl: 10, 20, 26, 34, 50, 100, 200, 250.                                                          |
-| **SMA Einheit**         | **1W** (Woche)                | Zeiteinheit je Periode: `1D` = Tag, `1W` = Woche, `1M` = Monat. Beispiel: *SMA Perioden 26* + *Einheit 1W* = **SMA über 26 Wochen**.                       |
+| **SMA Perioden**        | **26**                        | Anzahl der Perioden für den gleitenden Durchschnitt. Auswahl: 10, 20, 26, 34, 50, 100, 200, 250. |
+| **SMA Einheit**         | **1W** (Woche)                | Zeiteinheit je Periode: `1D` = Tag, `1W` = Woche, `1M` = Monat. Beispiel: *SMA Perioden 26* + *Einheit 1W* = **SMA über 26 Wochen**. |
 | **Index Ranking**       | **50**                        | Es werden nur Basiswerte in der Auswahl berücksichtigt, die niedriger als dieser Wert ist. Die Top-10 müssen in der Rangliste unterhalb der Hälfte dieses Wertes liegen. (Bereich 10–250). |
 | **Marktkapitalisierung** | **50**                       | Ein Basiswert wird für die Top-10 selektiert, wenn die Marktkapitalisierung über diesem Wert liegt. (Bereich 1–100). |
-| **Schriftgröße**        | **11**                        | Schriftgröße der Ergebnistabelle und Markttrend Bericht. (Schritfgrößen 9–20)                                                                              |
-| **Debug-Logging**       | **aus**                       | Schreibt detaillierte Diagnoseinformationen in die Protokolldatei `screener-levy-rsl.log`. Nur für die Fehleranalyse erforderlich.                        |
+| **Schriftgröße**        | **11**                        | Schriftgröße der Ergebnistabelle und Markttrend Bericht. (Schritfgrößen 9–20) |
+| **Debug-Logging**       | **aus**                       | Schreibt detaillierte Diagnoseinformationen in die Protokolldatei `screener-levy-rsl.log`. Nur für die Fehleranalyse erforderlich. |
 
 **Feste Auswahlkriterien** (nicht veränderbar): US-Aktien, deren Primärindex der S&P-500,
 NASDAQ-100 oder Dow Jones ist, gehandelt an NASDAQ oder NYSE, mit einer Marktkapitalisierung
@@ -176,7 +201,7 @@ von **über 50 Mrd. USD**.
 
 ---
 
-### 7 Berechnung der Top-10 und des Markttrends
+## 5 Berechnung der Top-10 und des Markttrends
 
 **Auswahl der Basiswerte (Filter Kriterien)**  
 
@@ -191,24 +216,26 @@ Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeig
 
 ---
 
-## 8. Strategie richtig anwenden
+## 6. Strategie richtig anwenden
 
 Die Standardeinstellungen (SMA-26 auf Wochenbasis, Aufwärtstrend, Top-10 aller Sektoren,
 Index Ranking 50) bilden die **Hauptstrategie** ab und sind für die meisten Anwender die
 richtige Wahl.
 
-### Den Markttrend prüfen
+### 6.1 Den Markttrend prüfen
 
 Die **RSL Momentum** Stratgie erfordert immer mit dem Trend zu handeln. Hierzu ermitteln wir zusätzich zur Stärke jeder einzelenen Positionen insbesondere auch den Trend des gesamten Marktes. Dies erhöht die Wahrscheinlichkeit erfolreich zu sein.
+
+<img src="resources/images/market-trend_howto.png" width="800" alt="RSL Momentum Screener Window">
 
 #### Zwei Marktrends
 
 Wir unterscheiden zwischen dem primären und sekundären Trend.
 
 | Trend | Zeitraum | Beschreibung |
-| :--- | :--- | :--- |
-| **Primär** | 26 Wochen | Der 26-Wochen-Trend des S&P 500 bestimmt die **grundlegende Fahrtrichtung des Portfolios** (Investiert vs. Cash).<br/>**Die Bedingung**: Der letzte ermittelte Kurs des S&P 500 muss über seinem gleitenden 26-Wochen-Durchschnitt notieren.<br/>**Die Funktion**: Dieser Filter schützt Sie vor Systemkrisen. Befindet sich der S&P 500 unter dieser Linie, befindet sich der Gesamtmarkt im Bärenmarkt.<br/>**Die Konsequenz**: Kaufsignale für Einzelaktien werden **vollständig blockiert**, bestehende Positionen werden je nach Regelwerk schrittweise abgebaut oder eingefroren. Das Portfolio wechselt in Cash oder andere Asset Klasse. |
-| **Sekundär** | 30 Tage | Der sekundäre Trend dient als **Timing-Instrument** und verhindert, dass Sie mitten in eine kurzfristige Marktkorrektur hineinkaufen.<br/>**Die Bedingung**: Der Durchschnittskurs des S&P 500 der letzten 30 Tage muss höher sein als der Durchschnittskurs der vorangegangenen 30 Tage (bzw. der aktuelle Kurs liegt über dem 30-Tage-Schnitt).<br/>**Die Funktion**: Selbst in einem intakten Bullenmarkt (primärer Trend positiv) gibt es immer wieder wochenlange Korrekturen. Würden Sie hier blind Aktien nachkaufen, greifen Sie oft in ein fallendes Messer.<br/>**Die Konsequenz**: Nur wenn der sekundäre Trend anzeigt, dass sich der S&P 500 kurzfristig wieder **stabilisiert oder nach oben dreht**, wird das grüne Licht für neue Aktienkäufe freigegeben. |
+| :---: | :--- | :--- |
+| 1️⃣<br/>**Primär** | 26 Wochen | Der 26-Wochen-Trend des S&P 500 bestimmt die **grundlegende Fahrtrichtung des Portfolios** (Investiert vs. Cash).<br/>**Die Bedingung**: Der letzte ermittelte Kurs des S&P 500 muss über seinem gleitenden 26-Wochen-Durchschnitt notieren.<br/>**Die Funktion**: Dieser Filter schützt Sie vor Systemkrisen. Befindet sich der S&P 500 unter dieser Linie, befindet sich der Gesamtmarkt im Bärenmarkt.<br/>**Die Konsequenz**: Kaufsignale für Einzelaktien werden **vollständig blockiert**, bestehende Positionen werden je nach Regelwerk schrittweise abgebaut oder eingefroren. Das Portfolio wechselt in Cash oder andere Asset Klasse. |
+| 2️⃣<br/>**Sekundär** | 30 Tage | Der sekundäre Trend dient als **Timing-Instrument** und verhindert, dass Sie mitten in eine kurzfristige Marktkorrektur hineinkaufen.<br/>**Die Bedingung**: Der Durchschnittskurs des S&P 500 der letzten 30 Tage muss höher sein als der Durchschnittskurs der vorangegangenen 30 Tage (bzw. der aktuelle Kurs liegt über dem 30-Tage-Schnitt).<br/>**Die Funktion**: Selbst in einem intakten Bullenmarkt (primärer Trend positiv) gibt es immer wieder wochenlange Korrekturen. Würden Sie hier blind Aktien nachkaufen, greifen Sie oft in ein fallendes Messer.<br/>**Die Konsequenz**: Nur wenn der sekundäre Trend anzeigt, dass sich der S&P 500 kurzfristig wieder **stabilisiert oder nach oben dreht**, wird das grüne Licht für neue Aktienkäufe freigegeben. |
 
 #### Das Ampelsystem des Markttrends
 
@@ -226,7 +253,7 @@ Aktien mit hoher historischer Volatilität (oberhalb des Medians) besitzen ein h
 
 Ohne die Prüfung des primären und sekundären Markttrends würde die RSL-Strategie Sie in einer Korrektur genau in die Aktien zwingen, die am stärksten einbrechen. Der Gesamtmarkt-Filter sorgt dafür, dass Sie das Gaspedal nur dann durchdrücken, wenn der Markt echten Rückenwind hat.  
 
-### Die RSL-Kennzahl verstehen
+### 6.2 Die RSL-Kennzahl verstehen
 
 Die **Relative Stärke nach Levy (RSL)** ist das Verhältnis von Kurs zu gleitendem Durchschnitt:
 
@@ -248,27 +275,30 @@ Je näher der RSL-Wert an 1,0 liegt, desto schwächer der Trend und folgedessen 
 
 Ein bärischer Wert kann nur zwischen **0 und 1** liegen, ein bullischer Wert ist dagegen **theoretisch unbegrenzt** nach oben möglich. Ein RSL von **0,5** entspricht somit einem Rückgang (Drawdown) von rund **50 %**, während ein RSL von **2,0** einer Aufwärtsbewegung von etwa **100 %** der gewählten Zeitspanne des SMA entspricht.
 
-### Das Ranking verstehen
+### 6.3 Das Ranking verstehen
 
-Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie) im Index an. Im Index wird die relative Stärke (RSL) für **alle** Aktien berechnet und nach diesem sortiert. Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge.  
+Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge. Die Basiswerte werden in drei Gruppen aufgeteilt, die jeweils nach dem RSL sortiert werden.  
 
-### Empfehlungen zur Trendwahl
+| Gruppe | Rang | Filter | Beschreibung |
+| :--- | :--- | :--- | :--- |
+| 1 | 1 - 50* | HV > Median und RSL > 1,0 | Die Top-50 im bullischen Trend und mit starken Momentum. |
+| 2 | 51 - n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
+| 3 | n+1 - ... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
 
-- **Handeln Sie diese Strategie niemals gegen den Trend. Verwenden Sie die bärische Strategie nicht, solange der Index im Bullenmarkt befindet.**
-- Liegt die RSL bei oder nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren
-  Signale (siehe Kapitel "Trendstärke" oberhalb).
-
-### Umsetzung der Strategie
+### 6.4 Umsetzung der Strategie
 
 Bitte folgen Sie der Anleitung, wie wir diese im Seminar gelernt haben. Danke.  
 
 #### Die Kaufregel (Einstieg)
 
-- **Aktion**: Es werden strikt die Plätze mit ✅ gekennzeichneten gekauft. Basiswerte werden mit ⚠️ gekennzeichnet, wenn der RSA > 1,8 liegt oder der sekundäre Markttrend mit "Mixed" bewertet ist. Diese Basiswerte können sie optional je nach Risikobereitschaft gekauft werden. Das Kapital wird exakt zu gleichen Teilen (je 10 %) aufgeteilt.
+- **Aktion**: Es werden strikt die Plätze mit ✅ gekennzeichneten gekauft. Basiswerte werden mit ⚠️ gekennzeichnet, wenn der RSA > 1,8 liegt oder der sekundäre Markttrend mit "Mixed" bewertet ist. Diese Basiswerte können sie optional je nach Risikobereitschaft kaufen (nicht empfohlen). Das Kapital wird exakt zu gleichen Teilen (je 10 %) aufgeteilt.
 
-#### Die Trägheitsregel / Verkaufsregel (Ausstieg)
+- **Handeln Sie diese Strategie niemals gegen den Trend.**
+- Liegt die RSL nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren Signale (siehe Kapitel "Trendstärke" oberhalb).
 
-- **Problem**: Fällt die Aktie von Platz 10 auf Platz 11, würde ein sofortiger Verkauf enorme Transaktionskosten verursachen.
+#### Die Verkaufsregel (Trägheitsregel, Ausstieg)
+
+- **Problem**: Fällt die Aktie von Platz 10 auf Platz 11, würde ein sofortiger Verkauf große Transaktionskosten verursachen.
 - **Lösung** nach Levy: Eine Aktie wird **nicht** sofort verkauft, wenn sie aus den Top 10 rutscht. Sie wird so lange im Depot gehalten, wie sie sich in der erweiterten Spitzengruppe - mit 💿 gekennzeichnet - der qualifizierten Liste aufhält.
 - **Verkaufssignal**: Erst wenn die Aktie nicht mehr mit 💿 gekennzeichnet ist (keine Markierung hat), wird sie verkauft. Der frei gewordene Platz wird durch den nächstbesten Aufsteiger aus den Top 10 besetzt, den man noch nicht besitzt.
 
