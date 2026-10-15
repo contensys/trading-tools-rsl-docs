@@ -14,10 +14,11 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release
 
 1. [Überblick und Zweck](#1-überblick-und-zweck)
 2. [Installation](#2-installation-release)
-3. [Key Features](#3-key-features)
-4. [Bedienung des Screener Tools](#4-bedienung-des-screener-tools)
-5. [Berechnung der Top-10 und des Markttrends](#5-berechnung-der-top-10-und-des-markttrends)
-6. [Strategie richtig anwenden](#6-strategie-richtig-anwenden)
+3. [Schneller Einstieg](#3-quick-guide---verwendung-des-screener-tools-in-n-schritten)
+4. [Key Features](#3-key-features)
+5. [Bedienung des Screener Tools](#4-bedienung-des-screener-tools)
+6. [Berechnung der Top-10 und des Markttrends](#5-berechnung-der-top-10-und-des-markttrends)
+7. [Strategie richtig anwenden](#6-strategie-richtig-anwenden)
 
 ---
 
@@ -82,10 +83,16 @@ Diese Bestätigung ist nur beim ersten Start erforderlich.
 
 ---
 
-## 3. Key Features
+## 3. Quick Guide - Verwendung des Screener Tools in N Schritten
+
+TODO: Zusammenfassung und Anwendung des Screeners in wenigen Schritten. Vom laden der Daten bis zum Verkaufssignal.
+
+---
+
+## 4. Key Features
 
 - **Ampelfarben:** Die Top-10 werden mit Emojis markiert. (✅, ⚠️, 🔴)
-- **Exit Signal:** Alle Basiswerte innerhalb des Top-n Rangliste werden markiert. (💿) Positionen außerhalb der Top-n Rangliste werden verkauft.
+- **Verkaufsregel:** Alle Basiswerte innerhalb des Top-n Rangliste werden markiert. (💿) Positionen außerhalb der Top-n Rangliste werden verkauft.
 - **Relative Stärke nach Levy:** Der RSL Indikator wird für alle Basiswerte des Index berechnet.
 - **Historische Volatilität:** Berechnung der Historischen Volatilität nach Levy zur Ermittlung des Momentum.
 - **Rangliste:** Es wird eine Rangliste 1..n über alle Basiswerte des Index erstellt.
@@ -100,7 +107,7 @@ Diese Bestätigung ist nur beim ersten Start erforderlich.
 
 ---
 
-## 4. Bedienung des Screener Tools
+## 5. Bedienung des Screener Tools
 
 Nach dem Start erscheint zunächst ein **Lizenz-/Hinweisfenster (About / Lizenz)**. Mit **„OK“**
 bestätigen Sie die Nutzungsbedingungen und gelangen in die Anwendung. Mit **„Cancel“** wird die
@@ -108,10 +115,10 @@ Anwendung beendet.
 
 <img src="resources/images/rsl-screener-window_howto.png" width="800" alt="RSL Momentum Screener Window">
 
-### 4.1 Daten laden 5️⃣
+### 5.1 Daten laden 5️⃣
 
 1. Der Screener startet mit den für die RSL Strategie passenden Filtereinstellungen.
-   Diese können nach Wunsch und Bedarf angepasst werden (siehe Abschnitt 6).
+   Diese können nach Wunsch und Bedarf angepasst werden (siehe Abschnitt 5.6).
 2. Auf **„Aktien suchen/aktualisieren“** klicken.
 3. Der Text des Buttons ändert sich in *⏰ Aktualisiere Daten* während die Daten geladen werden und
    es wird der Ladestatus für jeden Datenbereich angezeigt. Die Information wird am Ende automatisch
@@ -124,7 +131,7 @@ Anwendung beendet.
 > ℹ️ **Wichtig:** Nach **jeder** Änderung an den Filtereinstellungen müssen Sie erneut auf
 > **„Aktien suchen/aktualisieren“** klicken, damit die Tabellen aktualisiert werden.
 
-### 4.2 Schaltflächen 5️⃣
+### 5.2 Schaltflächen 5️⃣
 
 | Schaltfläche                  | Funktion                                                                |
 |:------------------------------|:------------------------------------------------------------------------|
@@ -137,9 +144,9 @@ Anwendung beendet.
 
 ---
 
-### 4.3 Der Markttrend 1️⃣2️⃣
+### 5.3 Der Markttrend 1️⃣2️⃣
 
-Eine detailierte Beschreibung finden Sie in Kapitel 6.1 unter "Die Strategie richtig anwenden".  
+Eine detailierte Beschreibung finden Sie in Kapitel 7 unter "Die Strategie richtig anwenden".  
 
 | Spalte | Zeile 1️⃣ | Zeile 2️⃣ |
 | :--- | :--- | :--- |
@@ -152,7 +159,7 @@ Eine detailierte Beschreibung finden Sie in Kapitel 6.1 unter "Die Strategie ric
 
 ---
 
-### 4.4 Die Ergebnistabelle – Spaltenbeschreibung 3️⃣
+### 5.4 Die Ergebnistabelle – Spaltenbeschreibung 3️⃣
 
 | Spalte             | Bedeutung                                                                                              |
 |--------------------|--------------------------------------------------------------------------------------------------------|
@@ -170,7 +177,7 @@ Eine detailierte Beschreibung finden Sie in Kapitel 6.1 unter "Die Strategie ric
 
 ---
 
-### 4.5 Suchen und Sortieren 3️⃣
+### 5.5 Suchen und Sortieren 3️⃣
 
 **Suchen/Filtern**  
 Die Suche funktioniert wie ein Filter. In der Tabelle einfach mit dem Tippen von Zeichen beginnen und die Liste wird nach dem *Ticker* gefiltert.
@@ -182,7 +189,7 @@ Mit einem Klick auf die Spalte ganz links über den Symbolen wird die ursprüngl
 
 ---
 
-### 4.6 Filtereinstellungen 4️⃣6️⃣
+### 5.6 Filtereinstellungen 4️⃣6️⃣
 
 | Filter                  | Standardwert                  | Bedeutung                                                                                                                                                  |
 |-------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -201,7 +208,7 @@ von **über 50 Mrd. USD**.
 
 ---
 
-## 5 Berechnung der Top-10 und des Markttrends
+## 6 Berechnung der Top-10 und des Markttrends
 
 **Auswahl der Basiswerte (Filter Kriterien)**  
 
@@ -216,13 +223,13 @@ Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeig
 
 ---
 
-## 6. Strategie richtig anwenden
+## 7. Strategie richtig anwenden
 
 Die Standardeinstellungen (SMA-26 auf Wochenbasis, Aufwärtstrend, Top-10 aller Sektoren,
 Index Ranking 50) bilden die **Hauptstrategie** ab und sind für die meisten Anwender die
 richtige Wahl.
 
-### 6.1 Den Markttrend prüfen
+### Schritt 1 - Den Markttrend prüfen
 
 Die **RSL Momentum** Stratgie erfordert immer mit dem Trend zu handeln. Hierzu ermitteln wir zusätzich zur Stärke jeder einzelenen Positionen insbesondere auch den Trend des gesamten Marktes. Dies erhöht die Wahrscheinlichkeit erfolreich zu sein.
 
@@ -253,7 +260,7 @@ Aktien mit hoher historischer Volatilität (oberhalb des Medians) besitzen ein h
 
 Ohne die Prüfung des primären und sekundären Markttrends würde die RSL-Strategie Sie in einer Korrektur genau in die Aktien zwingen, die am stärksten einbrechen. Der Gesamtmarkt-Filter sorgt dafür, dass Sie das Gaspedal nur dann durchdrücken, wenn der Markt echten Rückenwind hat.  
 
-### 6.2 Die RSL-Kennzahl verstehen
+### Schritt 2 - Die RSL-Kennzahl verstehen
 
 Die **Relative Stärke nach Levy (RSL)** ist das Verhältnis von Kurs zu gleitendem Durchschnitt:
 
@@ -275,7 +282,7 @@ Je näher der RSL-Wert an 1,0 liegt, desto schwächer der Trend und folgedessen 
 
 Ein bärischer Wert kann nur zwischen **0 und 1** liegen, ein bullischer Wert ist dagegen **theoretisch unbegrenzt** nach oben möglich. Ein RSL von **0,5** entspricht somit einem Rückgang (Drawdown) von rund **50 %**, während ein RSL von **2,0** einer Aufwärtsbewegung von etwa **100 %** der gewählten Zeitspanne des SMA entspricht.
 
-### 6.3 Das Ranking verstehen
+### Schritt 3 - Das Ranking verstehen
 
 Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge. Die Basiswerte werden in drei Gruppen aufgeteilt, die jeweils nach dem RSL sortiert werden.  
 
@@ -285,7 +292,7 @@ Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit h
 | 2 | 51 - n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
 | 3 | n+1 - ... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
 
-### 6.4 Umsetzung der Strategie
+### Schritt 4 - Umsetzung der Strategie
 
 Bitte folgen Sie der Anleitung, wie wir diese im Seminar gelernt haben. Danke.  
 
