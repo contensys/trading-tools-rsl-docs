@@ -14,11 +14,11 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release
 
 1. [Überblick und Zweck](#1-überblick-und-zweck)
 2. [Installation](#2-installation-release)
-3. [Schneller Einstieg](#3-quick-guide---verwendung-des-screener-tools-in-n-schritten)
-4. [Key Features](#3-key-features)
-5. [Bedienung des Screener Tools](#4-bedienung-des-screener-tools)
-6. [Berechnung der Top-10 und des Markttrends](#5-berechnung-der-top-10-und-des-markttrends)
-7. [Strategie richtig anwenden](#6-strategie-richtig-anwenden)
+3. [Schneller Einstieg](#3-quick-guide---verwendung-des-screener-tools-in-8-schritten)
+4. [Key Features](#4-key-features)
+5. [Bedienung des Screener Tools](#5-bedienung-des-screener-tools)
+6. [Berechnung der Top-10 und des Markttrends](#6-berechnung-der-top-10-und-des-markttrends)
+7. [Strategie richtig anwenden](#7-strategie-richtig-anwenden)
 
 ---
 
@@ -83,9 +83,66 @@ Diese Bestätigung ist nur beim ersten Start erforderlich.
 
 ---
 
-## 3. Quick Guide - Verwendung des Screener Tools in N Schritten
+## 3. Quick Guide - Verwendung des Screener Tools in 8 Schritten
 
-TODO: Zusammenfassung und Anwendung des Screeners in wenigen Schritten. Vom laden der Daten bis zum Verkaufssignal.
+Eine Kurzanleitung in nur 8 Schritten, damit Sie sofort loslegen können.  
+
+> Wir empfehlen Ihnen vor Ihrer ersten echten Investition die Kapitel
+[5. Bedienung des Screener Tools](#5-bedienung-des-screener-tools) und
+[7. Strategie richtig anwenden](#7-strategie-richtig-anwenden) zu lesen.
+Denn dieser **Quick Guide** ersetzt **nicht** die ausführliche Beschreibung.
+Bei Fragen und Unklarheiten helfen wir gerne auch in einem Coaching weiter.
+
+**Schritt 1 – App starten**  
+
+- Starten Sie die App und bestätigen Sie das Hinweisfenster mit **„OK“**.
+
+**Schritt 2 – Standardeinstellungen verwenden**  
+
+- Ändern Sie nichts an den Filtereinstellungen. Die Standardwerte sind die Hauptstrategie.
+Falls Sie etwas verändert haben, klicken Sie auf **„Zurücksetzen“**.
+
+**Schritt 3 – Daten laden**  
+
+- Klicken Sie auf **„Aktien suchen/aktualisieren“** und warten Sie, bis die Ladeanzeige
+verschwindet und die Tabelle gefüllt ist.
+
+**Schritt 4 – Markttrend prüfen (das Wichtigste!)**  
+
+- Schauen Sie oben auf den Markttrend des S&P-500  
+  (Zeile 1 = primärer Trend 26 Wochen, Zeile 2 = sekundärer Trend 30 Tage):
+  
+  | Ampel | | Markttrend | Was Sie tun |
+  | :---: | :--- | :--- | :--- |
+  | ✅ | Grün | Primär **▲ Bullisch** und sekundär **Uptrend** | Weiter mit Schritt 5: Kaufen ist erlaubt. |
+  | ⚠️ | Gelb | Primär **▲ Bullisch**, sekundär **Mixed** | Bestehende Aktien halten. **Nichts neu kaufen.** |
+  | 🔴 | Rot | Primär **▼ Bärisch** / **Downtrend** | **Nichts kaufen.** Positionen abbauen und in Cash gehen. |
+
+> ⚠️ Handeln Sie bitte **niemals gegen den Trend** des S&P-500.
+
+**Schritt 5 – Kaufen**  
+
+- Kaufen Sie nur Aktien, die in der Tabelle mit **✅** markiert sind. Teilen Sie Ihr Kapital
+gleichmäßig auf: höchstens **10 Aktien zu je 10 %**.  
+Aktien mit **⚠️** kaufen Sie besser nicht.
+
+**Schritt 6 – Regelmäßig prüfen**  
+
+- Starten Sie die App regelmäßig (z. B. einmal pro Woche), klicken Sie auf
+**„Aktien suchen/aktualisieren“** und prüfen Sie zuerst wieder den Markttrend (Schritt 4).
+
+**Schritt 7 – Verkaufen (Verkaufssignal)**  
+
+- Suchen Sie Ihre Aktien in der Tabelle (einfach den Ticker eintippen).
+
+  - Hat Ihre Aktie ein Symbol (**✅**, **⚠️** oder **💿**): dann **halten**.
+  - Hat Ihre Aktie **kein Symbol** mehr: **verkaufen**.
+  - Ist der Markttrend **🔴 Rot**: keine Käufe mehr, Positionen abbauen (siehe Schritt 4).
+
+**Schritt 8 – Freie Plätze neu besetzen und von vorne beginnen**  
+
+- Ersetzen Sie jede verkaufte Aktie durch die nächstbeste **✅**-Aktie, die Sie noch nicht besitzen –
+aber nur, wenn der Markttrend **✅ Grün** ist. Danach beginnen Sie wieder bei Schritt 3.
 
 ---
 
