@@ -53,12 +53,12 @@ keine Anmeldung erforderlich. Die Daten sind um 15 Minuten verzögert.
 
 Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
 
-➡️ **Download:** <https://schranz.sharepoint.com/:f:/s/bigbusiness/IgBePagCvFo4TKmHnN8BnKdQAZoA5pxNeliCAKHlAJi7RkM>
+➡️ **Download:**  
 
 | Plattform | Paketname                              |
 |-----------|----------------------------------------|
-| macOS     | `RSL-MomentumScreener-macos-arm.zip`   |
-| Windows   | `RSL-MomentumScreener-win-x86-64.zip`  |
+| macOS     | [`RSL-MomentumScreener-macos-arm.zip`](https://github.com/contensys/trading-tools-rsl-docs/releases/download/1.0.0/RSL-MomentumScreener-macos-arm-1.0.0.zip) |
+| Windows   | [`RSL-MomentumScreener-win-x86-64.zip`](https://github.com/contensys/trading-tools-rsl-docs/releases/download/1.0.0/RSL-MomentumScreener-win-x86-64-1.0.0.zip)  |
 
 ### 2.1 Installation MacOS (Apple Silicon / ARM)
 
