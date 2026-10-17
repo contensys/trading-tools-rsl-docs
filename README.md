@@ -86,30 +86,27 @@ Diese Bestätigung ist nur beim ersten Start erforderlich.
 
 Eine Kurzanleitung in nur 8 Schritten, damit Sie sofort loslegen können.  
 
-> Wir empfehlen Ihnen vor Ihrer ersten echten Investition die Kapitel
+> [!TIP]  
+> Dieser **Quick Guide** ersetzt **nicht** die ausführliche Beschreibung.
+> Wir empfehlen Ihnen deshalb vor Ihrer ersten echten Investition die Kapitel
 [5. Bedienung des Screener Tools](#5-bedienung-des-screener-tools) und
 [7. Strategie richtig anwenden](#7-strategie-richtig-anwenden) zu lesen.
-Denn dieser **Quick Guide** ersetzt **nicht** die ausführliche Beschreibung.
 Bei Fragen und Unklarheiten helfen wir gerne auch in einem Coaching weiter.
 
 **Schritt 1 – App starten**  
-
-- Starten Sie die App und bestätigen Sie das Hinweisfenster mit **„OK“**.
+Starten Sie die App und bestätigen Sie das Hinweisfenster mit **„OK“**.  
 
 **Schritt 2 – Standardeinstellungen verwenden**  
-
-- Ändern Sie nichts an den Filtereinstellungen. Die Standardwerte sind die Hauptstrategie.
-Falls Sie etwas verändert haben, klicken Sie auf **„Zurücksetzen“**.
+Ändern Sie nichts an den Filtereinstellungen. Die Standardwerte sind die Hauptstrategie.
+Falls Sie etwas verändert haben, klicken Sie auf **„Zurücksetzen“**.  
 
 **Schritt 3 – Daten laden**  
-
-- Klicken Sie auf **„Aktien suchen/aktualisieren“** und warten Sie, bis die Ladeanzeige
-verschwindet und die Tabelle gefüllt ist.
+Klicken Sie auf **„Aktien suchen/aktualisieren“** und warten Sie, bis die Ladeanzeige
+verschwindet und die Tabelle gefüllt ist.  
 
 **Schritt 4 – Markttrend prüfen (das Wichtigste!)**  
-
-- Schauen Sie oben auf den Markttrend des S&P-500  
-  (Zeile 1 = primärer Trend 26 Wochen, Zeile 2 = sekundärer Trend 30 Tage):
+Schauen Sie oben auf den Markttrend des S&P-500  
+(Zeile 1 = primärer Trend 26 Wochen, Zeile 2 = sekundärer Trend 30 Tage):
   
   | Ampel | | Markttrend | Was Sie tun |
   | :---: | :--- | :--- | :--- |
@@ -117,49 +114,44 @@ verschwindet und die Tabelle gefüllt ist.
   | ⚠️ | Gelb | Primär **▲ Bullisch**, sekundär **Mixed** | Bestehende Aktien halten. **Nichts neu kaufen.** |
   | 🔴 | Rot | Primär **▼ Bärisch** / **Downtrend** | **Nichts kaufen.** Positionen abbauen und in Cash gehen. |
 
-> ⚠️ Handeln Sie bitte **niemals gegen den Trend** des S&P-500.
+> *Wichtig:* Handeln Sie bitte **niemals gegen den Trend** des S&P-500.  
 
 **Schritt 5 – Kaufen**  
-
-- Kaufen Sie nur Aktien, die in der Tabelle mit **✅** markiert sind. Teilen Sie Ihr Kapital
-gleichmäßig auf: höchstens **10 Aktien zu je 10 %**.  
-Aktien mit **⚠️** kaufen Sie besser nicht.
+Kaufen Sie nur Aktien, die in der Tabelle mit **✅** markiert sind. Teilen Sie Ihr Kapital
+gleichmäßig auf: höchstens **10 Aktien zu je 10 %**. Aktien mit **⚠️** kaufen Sie besser nicht.  
 
 **Schritt 6 – Regelmäßig prüfen**  
-
-- Starten Sie die App regelmäßig (z. B. einmal pro Woche), klicken Sie auf
-**„Aktien suchen/aktualisieren“** und prüfen Sie zuerst wieder den Markttrend (Schritt 4).
+Starten Sie die App regelmäßig (z. B. einmal pro Woche), klicken Sie auf
+**„Aktien suchen/aktualisieren“** und prüfen Sie zuerst wieder den Markttrend (Schritt 4).  
 
 **Schritt 7 – Verkaufen (Verkaufssignal)**  
+Suchen Sie Ihre Aktien in der Tabelle (einfach den Ticker eintippen).  
 
-- Suchen Sie Ihre Aktien in der Tabelle (einfach den Ticker eintippen).
-
-  - Hat Ihre Aktie ein Symbol (**✅**, **⚠️** oder **💿**): dann **halten**.
-  - Hat Ihre Aktie **kein Symbol** mehr: **verkaufen**.
-  - Ist der Markttrend **🔴 Rot**: keine Käufe mehr, Positionen abbauen (siehe Schritt 4).
+- Hat Ihre Aktie ein Symbol ✅, ⚠️ oder 💿: dann **halten**.
+- Hat Ihre Aktie **kein Symbol** mehr: **verkaufen**.
+- Ist der Markttrend 🔴 **Rot**: keine Käufe mehr, Positionen abbauen (siehe Schritt 4).
 
 **Schritt 8 – Freie Plätze neu besetzen und von vorne beginnen**  
-
-- Ersetzen Sie jede verkaufte Aktie durch die nächstbeste **✅**-Aktie, die Sie noch nicht besitzen –
+Ersetzen Sie jede verkaufte Aktie durch die nächstbeste ✅-Aktie, die Sie noch nicht besitzen –
 aber nur, wenn der Markttrend **✅ Grün** ist. Danach beginnen Sie wieder bei Schritt 3.
 
 ---
 
 ## 4. Key Features
 
-- **Ampelfarben:** Die Top-10 werden mit Emojis markiert. (✅, ⚠️, 🔴)
-- **Verkaufsregel:** Alle Basiswerte innerhalb des Top-n Rangliste werden markiert. (💿) Positionen außerhalb der Top-n Rangliste werden verkauft.
+- **Ampelfarben:** Die Top-10 werden mit Signal markiert. (✅ ⚠️ 🔴)
+- **Verkaufsregel:** Alle Basiswerte innerhalb der Top-n Rangliste werden mit 💿 (Position halten) markiert.
 - **Relative Stärke nach Levy:** Der RSL Indikator wird für alle Basiswerte des Index berechnet.
-- **Historische Volatilität:** Berechnung der Historischen Volatilität nach Levy zur Ermittlung des Momentum.
-- **Rangliste:** Es wird eine Rangliste 1..n über alle Basiswerte des Index erstellt.
-- **Markttrend Bewertung:** Es wird der primäre Trend der letzten 26 Wochen und sekundäre Trend der letzten 30 Tage berechnet. Das Ergebnise wird mithilfe von Ampelfarben und Trendrichtung angezeigt (Bullisch, Bärisch, Uptrend, Downtrend und Mixed).
-- **Selektive Auswahl Basiswerte:** Es werden die alle relevanten Basiswerte des Index ermittelt und aufgelistet. Die Liste enthält alle Basiswerte, die über dem Median der Historischen Volatilität liegen oder einen RSL > 1,0 haben.
-- **Sortieren:** Alle Spalten der Tabelle können per Mausklick aufsteigend und absteigend sortiert werden.
-- **Suchen und Filter:** Basiswerte können durch einfache Eingabe des Tickers gesucht und gefiltert werden.
-- **Filtereinstellungen:** Die Marktkapitalisierung, die Anzahl der Rangliste, der Zeitraum (Perioden) und die Zeiteinheit (Tage, Wochen, Monate) kann bei Bedarf geändert werden. Mit einem Knopfdruck können die empfohlenen Standardeinstellungen wiederhergestellt werden.
-- **Schnelles Laden:** Die Daten werden für 15 Minuten gespeichert. Danach werden diese neue geladen und neu berechnet. So können unterschiedliche Perioden und Einheiten geladen werden und schnell wieder zurück wechseln. Zudem werden die maximalen Abfragelimits geschont.
-- **Fehlerbehandlung:** Schwerwiegende Fehler werden in Deutsch angezeigt. Darunter sind auch "Abfrage Einschränkungen", "Verbindungsfehler", "Berechnungsfehler" u.v.m.
-- **Schriftgröße:** Die Schriftgröße der Basiswert Tabelle und Markttrendbewertung kann geändert werden. Die Größe der App wird automatisch angepasst.
+- **Momentum Indikator:** Das Momentum wird anhand der Historischen Volatilität nach Levy berechnet berechnet.
+- **Rangliste:** Es wird eine Rangliste für alle Basiswerte des Index erstellt.
+- **Markttrend Bewertung:** Es wird der primäre Markttrend mittels der letzten 26 Wochen sowie der sekundäre Markttrend der letzten 30 Tage berechnet. Das Ergebnise wird mit Ampelfarben und Trendrichtung angezeigt (Bullisch, Bärisch, Uptrend, Downtrend und Mixed).
+- **Selektive Auswahl Basiswerte:** Es werden alle relevanten Basiswerte des Index ermittelt und aufgelistet. Die Liste enthält alle Basiswerte, die über dem Median der Historischen Volatilität liegen oder einen Relative Stärke (RSL) über 1,0 haben.
+- **Sortieren:** Alle Spalten der Tabelle können per Mausklick auf den Spaltennamen aufsteigend und absteigend sortiert werden.
+- **Suchen / Filter:** Basiswerte können durch einfache Eingabe des Tickers gefiltert und gefunden werden.
+- **Filtereinstellungen:** Die empfohlenen Einstellungen können angepasst werden. Es können die Marktkapitalisierung, die Länge der Rangliste, den Zeitraum (Perioden) und die Zeiteinheit (Tage, Wochen, Monate) bei Bedarf angepasst werden. Die empfohlenen Standardeinstellungen können per Knopfdruck wiederhergestellt werden.
+- **Schnelles Laden:** Die Daten werden für 15 Minuten gespeichert. Danach werden diese neue geladen und neu berechnet. So können unterschiedliche Perioden und Einheiten geladen werden und schnell wieder ohne Neuberechnung zurück wechseln. Zudem werden die maximalen Abfragelimits geschont.
+- **Fehlerbehandlung:** Schwerwiegende Fehler werden in Deutsch angezeigt. Dies beinhaltet "Datenlimits", "Verbindungsfehler", "Berechnungsfehler" u.v.m.
+- **Schriftgröße:** Die Schriftgröße der Basiswertliste und Markttrendbewertung können geändert werden. Die Größe der App wird automatisch angepasst.
 
 ---
 
@@ -297,18 +289,18 @@ Wir unterscheiden zwischen dem primären und sekundären Trend.
 
 | Trend | Zeitraum | Beschreibung |
 | :---: | :--- | :--- |
-| 1️⃣<br/>**Primär** | 26 Wochen | Der 26-Wochen-Trend des S&P 500 bestimmt die **grundlegende Fahrtrichtung des Portfolios** (Investiert vs. Cash).<br/>**Die Bedingung**: Der letzte ermittelte Kurs des S&P 500 muss über seinem gleitenden 26-Wochen-Durchschnitt notieren.<br/>**Die Funktion**: Dieser Filter schützt Sie vor Systemkrisen. Befindet sich der S&P 500 unter dieser Linie, befindet sich der Gesamtmarkt im Bärenmarkt.<br/>**Die Konsequenz**: Kaufsignale für Einzelaktien werden **vollständig blockiert**, bestehende Positionen werden je nach Regelwerk schrittweise abgebaut oder eingefroren. Das Portfolio wechselt in Cash oder andere Asset Klasse. |
-| 2️⃣<br/>**Sekundär** | 30 Tage | Der sekundäre Trend dient als **Timing-Instrument** und verhindert, dass Sie mitten in eine kurzfristige Marktkorrektur hineinkaufen.<br/>**Die Bedingung**: Der Durchschnittskurs des S&P 500 der letzten 30 Tage muss höher sein als der Durchschnittskurs der vorangegangenen 30 Tage (bzw. der aktuelle Kurs liegt über dem 30-Tage-Schnitt).<br/>**Die Funktion**: Selbst in einem intakten Bullenmarkt (primärer Trend positiv) gibt es immer wieder wochenlange Korrekturen. Würden Sie hier blind Aktien nachkaufen, greifen Sie oft in ein fallendes Messer.<br/>**Die Konsequenz**: Nur wenn der sekundäre Trend anzeigt, dass sich der S&P 500 kurzfristig wieder **stabilisiert oder nach oben dreht**, wird das grüne Licht für neue Aktienkäufe freigegeben. |
+| 1️⃣<br/>**Primär** | 26 Wochen | Der 26-Wochen-Trend (6 Monate) des S&P 500 bestimmt die **grundlegende Fahrtrichtung des Portfolios** (Investiert vs. Cash).<br/>**Die Bedingung**: Der letzte ermittelte Kurs des S&P 500 muss über seinem gleitenden 26-Wochen-Durchschnitt notieren.<br/>**Die Funktion**: Dieser Filter schützt Sie vor Systemkrisen. Befindet sich der S&P 500 unter dieser Linie, befindet sich der Gesamtmarkt im Bärenmarkt.<br/>**Die Konsequenz**: Kaufsignale für Einzelaktien werden **vollständig blockiert**, bestehende Positionen werden je nach Regelwerk schrittweise abgebaut oder eingefroren. Das Portfolio wechselt in Cash oder andere Asset Klasse. |
+| 2️⃣<br/>**Sekundär** | 30 Tage | Der sekundäre Trend dient als **Timing-Instrument** und verhindert, dass Sie mitten in eine kurzfristige Marktkorrektur hineinkaufen.<br/>**Die Bedingung**: Die Schlußkurse des S&P 500 der letzten 30 Tage muss höher sein als der Durchschnittskurs (SMA-30) der vorangegangenen 30 Tage.<br/>Dabei gilt für den **Uptrend** => über 80% der Tageskurse liegen über dem SMA, **Mixed** => mindestens 50% der Tageskurse eliegen über dem SMA, **Downtrend** = wenn weniger als die Hälfte unterhalb dem SMA geschlossen haben.<br/>**Die Funktion**: Selbst in einem intakten Bullenmarkt (primärer Trend positiv) gibt es immer wieder wochenlange Korrekturen. Würden Sie hier blind Aktien nachkaufen, greifen Sie oft in ein fallendes Messer.<br/>**Die Konsequenz**: Nur wenn der sekundäre Trend anzeigt, dass sich der S&P 500 kurzfristig wieder **stabilisiert oder nach oben dreht**, wird das grüne Licht für neue Aktienkäufe freigegeben. |
 
 #### Das Ampelsystem des Markttrends
 
 In der Praxis der Momentum-Strategie werden diese beiden Markttrends zu einem hocheffizienten Filter verknüpft:
 
 | Primärtrend | Sekundärtrend | Marktzustand | Strategische Position im Depot |
-| :--- | :--- | :--- | :--- |
-| ✅ ▲ Bullisch | ✅ **Uptrend**<br/>(>80% oberhalb SMA) | Voller Bullenmarkt | **Grünes Licht**: Volle Investition. Neue Top-10-Aktien werden gekauft. |
-| ✅ ▲ Bullisch | ⚠️ Mixed<br/>(>50% oberhalb SMA) | Gesunde Korrektur | **Gelbes Licht**: Bestehende Aktien halten. Keine Neukäufe (Cash aufbauen). |
-| 🔴 ▼ Bärisch | 🔴 Downtrend | Bärenmarkt / Crash | **Rotes Licht**: Keine Käufe. Konsequente Absicherung / Liquidität. |
+| :---: | :---: | :--- | :--- |
+| ✅<br/>▲ Bullisch | ✅<br/>Uptrend | Voller Bullenmarkt | **Grünes Licht**: Volle Investition. Neue Top-10-Aktien werden gekauft. |
+| ✅<br/>▲ Bullisch | ⚠️<br/>Mixed | Gesunde Korrektur | **Gelbes Licht**: Bestehende Aktien halten. Keine Neukäufe (Cash aufbauen). |
+| 🔴<br/>▼ Bärisch | 🔴<br/>Downtrend | Bärenmarkt / Crash | **Rotes Licht**: Keine Käufe. Konsequente Absicherung / Liquidität. |
 
 **Warum ist der Markttrend für die Top-10-Auswahl so wichtig?**  
 
@@ -344,9 +336,11 @@ Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit h
 
 | Gruppe | Rang | Filter | Beschreibung |
 | :--- | :--- | :--- | :--- |
-| 1 | 1 - 50* | HV > Median und RSL > 1,0 | Die Top-50 im bullischen Trend und mit starken Momentum. |
-| 2 | 51 - n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
-| 3 | n+1 - ... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
+| **1** | 1&#160;-&#160;50* | HV > Median und RSL > 1,0 | Die Top-50 im bullischen Trend und mit starken Momentum. |
+| **2** | 51&#160;-&#160;n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
+| **3** | n+1&#160;-&#160;... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
+
+\*) *Der Wert entspricht der Standardeinstellung der stärksten 50 Aktien (Top 10%). Sie können den Wert beliebig verändern.*  
 
 ### Schritt 4 - Umsetzung der Strategie
 
