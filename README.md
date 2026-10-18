@@ -48,10 +48,10 @@ Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
 
 ➡️ **Download:**  
 
-| Plattform | Paketname                              |
-|-----------|----------------------------------------|
-| [<img src="resources/images/download-macos.svg" width="140" alt="Download Momentum Screener for MacOS">](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-macos-arm-1.1.0.zip) | [`RSL-MomentumScreener-macos-arm.zip`](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-macos-arm-1.1.0.zip) |
-| [<img src="resources/images/download-windows.svg" width="140" alt="Download Momentum Screener for MacOS">](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-win-x86-64-1.1.0.zip) | [`RSL-MomentumScreener-win-x86-64.zip`](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-win-x86-64-1.1.0.zip) |
+| Plattform | Paketname                              | Größe |
+| :-------- | :------------------------------------- | ----: |
+| [<img src="resources/images/download-macos.svg" width="140" alt="Download Momentum Screener for MacOS">](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-macos-arm-1.1.0.zip) | [`RSL-MomentumScreener-macos-arm.zip`](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-macos-arm-1.1.0.zip) | 50,2 MB |
+| [<img src="resources/images/download-windows.svg" width="140" alt="Download Momentum Screener for MacOS">](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-win-x86-64-1.1.0.zip) | [`RSL-MomentumScreener-win-x86-64.zip`](https://github.com/contensys/trading-tools-rsl-docs/releases/download/v1.1.0/RSL-MomentumScreener-win-x86-64-1.1.0.zip) | 57,7 MB |
 
 ### 2.1 Installation MacOS (Apple Silicon / ARM)
 
