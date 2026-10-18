@@ -343,7 +343,7 @@ Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit h
 | Gruppe | Rang | Filter | Beschreibung |
 | :--- | :--- | :--- | :--- |
 | **1** | 1&nbsp;-&nbsp;50&nbsp;*) | HV > Median und RSL > 1,0 | Die Top-50 im bullischen Trend und mit starken Momentum. |
-| **2** | 51nbsp;-&nbsp;n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
+| **2** | 51&nbsp;-&nbsp;n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
 | **3** | n+1&nbsp;-&nbsp;... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
 
 \*) *Der Wert entspricht der Standardeinstellung der stärksten 50 Aktien (Top 10%). Sie können den Wert beliebig verändern.* [^1]  
