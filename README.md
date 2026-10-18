@@ -142,7 +142,7 @@ aber nur, wenn der Markttrend **✅ Grün** ist. Danach beginnen Sie wieder bei 
 - **Ampelfarben:** Die Top-10 werden mit Signal markiert. (✅ ⚠️ 🔴)
 - **Verkaufsregel:** Alle Basiswerte innerhalb der Top-n Rangliste werden mit 💿 (Position halten) markiert.
 - **Relative Stärke nach Levy:** Der RSL Indikator wird für alle Basiswerte des Index berechnet.
-- **Momentum Indikator:** Das Momentum wird anhand der Historischen Volatilität nach Levy berechnet berechnet.
+- **Momentum Indikator:** Das Momentum wird anhand der Historischen Volatilität (HV) nach Levy berechnet berechnet. Die HV Werte können in einem Histogramm angezeigt und damit das Risikoniveau bestimmt werden.
 - **Rangliste:** Es wird eine Rangliste für alle Basiswerte des Index erstellt.
 - **Markttrend Bewertung:** Es wird der primäre Markttrend mittels der letzten 26 Wochen sowie der sekundäre Markttrend der letzten 30 Tage berechnet. Das Ergebnise wird mit Ampelfarben und Trendrichtung angezeigt (Bullisch, Bärisch, Uptrend, Downtrend und Mixed).
 - **Selektive Auswahl Basiswerte:** Es werden alle relevanten Basiswerte des Index ermittelt und aufgelistet. Die Liste enthält alle Basiswerte, die über dem Median der Historischen Volatilität liegen oder einen Relative Stärke (RSL) über 1,0 haben.
