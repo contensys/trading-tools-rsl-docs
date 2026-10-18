@@ -13,8 +13,8 @@ Dokumentation: <https://github.com/contensys/trading-tools-rsl-docs/tree/release
 **Inhalt**  
 
 1. [Überblick und Zweck](#1-überblick-und-zweck)
-2. [Installation](#2-installation-release)
-3. [Schneller Einstieg](#3-quick-guide---verwendung-des-screener-tools-in-8-schritten)
+2. [Installation](#2-installation-)
+3. [Anleitung in 8 Schritten](#3-quick-guide---anleitung-des-screener-tools-in-8-schritten)
 4. [Key Features](#4-key-features)
 5. [Bedienung des Screener Tools](#5-bedienung-des-screener-tools)
 6. [Berechnung der Top-10 und des Markttrends](#6-berechnung-der-top-10-und-des-markttrends)
@@ -58,9 +58,9 @@ Die fertigen Programmpakete stehen im OneDrive-Bereich zum Download bereit:
 Das macOS-Paket ist **signiert und notariell beglaubigt (notarized)** und kann daher ohne
 zusätzliche Sicherheitswarnungen gestartet werden.
 
-1. Datei `RSL-MomentumScreener-macos-arm.zip` herunterladen. Das ZIP-Archiv wird in der Regel
+1. Die Datei **`RSL-MomentumScreener-macos-arm.zip`** herunterladen. Das ZIP-Archiv wird in der Regel
    automatisch entpackt.
-2. Die App **`RSL-MomentumScreener.app`** an einen in den Ordner **`/Programme` (/Applications)**.
+2. Die App **`RSL-MomentumScreener.app`** in den Ordner **`/Programme` (/Applications)** kopieren.
 3. App per Doppelklick starten.
 
 > ⚠️ **Hinweis:** Starten Sie die App **nicht direkt aus dem Ordner „Downloads“**.
@@ -69,20 +69,21 @@ zusätzliche Sicherheitswarnungen gestartet werden.
 
 ### 2.2 Installation Windows (64-Bit)
 
-Das Windows-Paket ist **nicht signiert**. Windows Defender (SmartScreen) wird den Start daher
-zunächst blockieren. Das ist normal und kein Hinweis auf Schadsoftware.
+Obwohl das Windows-Paket **signiert** ist, sehen Sie beim ersten start ein blaues Fenster
+von **Windows Defender (SmartScreen)** und blockiert zunächst den Start.
+Das ist normal und kein Hinweis auf Schadsoftware. (Die Qualifizierung bei Microsoft Azure läuft noch.)
 
-1. Datei `RSL-MomentumScreener-win-x86-64.zip` herunterladen und entpacken.
+1. Datei **`RSL-MomentumScreener-win-x86-64.zip`** herunterladen und entpacken.
 2. Die Datei **`RSL-MomentumScreener.exe`** per Doppelklick starten.
 3. Erscheint die Meldung **„Der Computer wurde durch Windows geschützt“**:
-   - Auf **„Weitere Informationen“** klicken.
+   - Auf **„Weitere Informationen“ (More info...)** oben im Text klicken.
    - Anschließend auf **„Trotzdem ausführen“ (Run anyway)** klicken.
 
-Diese Bestätigung ist nur beim ersten Start erforderlich.
+Diese Bestätigung ist nur beim ersten Start erforderlich.  
 
 ---
 
-## 3. Quick Guide - Verwendung des Screener Tools in 8 Schritten
+## 3. Quick Guide - Anleitung des Screener Tools in 8 Schritten
 
 Eine Kurzanleitung in nur 8 Schritten, damit Sie sofort loslegen können.  
 
@@ -91,7 +92,7 @@ Eine Kurzanleitung in nur 8 Schritten, damit Sie sofort loslegen können.
 > Wir empfehlen Ihnen deshalb vor Ihrer ersten echten Investition die Kapitel
 [5. Bedienung des Screener Tools](#5-bedienung-des-screener-tools) und
 [7. Strategie richtig anwenden](#7-strategie-richtig-anwenden) zu lesen.
-Bei Fragen und Unklarheiten helfen wir gerne auch in einem Coaching weiter.
+Bei Fragen und Unklarheiten helfen wir gerne auch in einem Coaching weiter. Der Author kann Ihnen die Kontaktdaten der Coaches geben.  
 
 **Schritt 1 – App starten**  
 Starten Sie die App und bestätigen Sie das Hinweisfenster mit **„OK“**.  
@@ -102,23 +103,24 @@ Falls Sie etwas verändert haben, klicken Sie auf **„Zurücksetzen“**.
 
 **Schritt 3 – Daten laden**  
 Klicken Sie auf **„Aktien suchen/aktualisieren“** und warten Sie, bis die Ladeanzeige
-verschwindet und die Tabelle gefüllt ist.  
+verschwindet und die Werte in allen Spalten in der Tabelle angezeigt werden.  
+Dies dauert je nach Auslastung der Datenserver circa 20 Sekunden.  
 
 **Schritt 4 – Markttrend prüfen (das Wichtigste!)**  
-Schauen Sie oben auf den Markttrend des S&P-500  
-(Zeile 1 = primärer Trend 26 Wochen, Zeile 2 = sekundärer Trend 30 Tage):
+Schauen Sie bitte oben auf den Markttrend des S&P-500.  
+(Zeile 1 = primärer Trend 26 Wochen, Zeile 2 = sekundärer Trend 30 Tage):  
   
   | Ampel | | Markttrend | Was Sie tun |
   | :---: | :--- | :--- | :--- |
   | ✅ | Grün | Primär **▲ Bullisch** und sekundär **Uptrend** | Weiter mit Schritt 5: Kaufen ist erlaubt. |
-  | ⚠️ | Gelb | Primär **▲ Bullisch**, sekundär **Mixed** | Bestehende Aktien halten. **Nichts neu kaufen.** |
-  | 🔴 | Rot | Primär **▼ Bärisch** / **Downtrend** | **Nichts kaufen.** Positionen abbauen und in Cash gehen. |
+  | ⚠️ | Gelb | Primär **▲ Bullisch** und sekundär **Mixed** | Bestehende Aktien halten. **Nichts neu kaufen.** |
+  | 🔴 | Rot | Primär **▼ Bärisch** oder sekundär **Downtrend** | **Nichts kaufen.** Positionen abbauen und in Cash gehen. |
 
 > *Wichtig:* Handeln Sie bitte **niemals gegen den Trend** des S&P-500.  
 
 **Schritt 5 – Kaufen**  
-Kaufen Sie nur Aktien, die in der Tabelle mit **✅** markiert sind. Teilen Sie Ihr Kapital
-gleichmäßig auf: höchstens **10 Aktien zu je 10 %**. Aktien mit **⚠️** kaufen Sie besser nicht.  
+Kaufen Sie nur Aktien, die in der Tabelle mit ✅ markiert sind. Teilen Sie Ihr Kapital
+gleichmäßig auf: höchstens **10 Aktien zu je 10 %**. Aktien mit ⚠️ kaufen Sie besser nicht.  
 
 **Schritt 6 – Regelmäßig prüfen**  
 Starten Sie die App regelmäßig (z. B. einmal pro Woche), klicken Sie auf
@@ -204,6 +206,7 @@ Eine detailierte Beschreibung finden Sie in Kapitel 7 unter "Die Strategie richt
 | **Datum** | Das Datum des letzten Schlußkurses |
 | **Trend** | Die Richtung des Trends ▲ Bullisch (aufwärts) oder ▼ Bärisch (abwärts)<br/>Es wird die Quote [%] über die Anzahl der Schlußkurse über dem wöchentlichen SMA-26 liegen (oder dessen Auswahl) | Der Trend kann Uptrend (aufwärts), unklar (Mixed) oder Downtrend (abwärts) sein<br/>Die Quote [%] über die Anzahl täglichen Schlußkurse über SMA-30 bestimmt den Trend: >80% = Uptrend, >50% = Mixed, <50% = Downtrend |
 | **Details** | Die Punkte und Prozent des Schlußkurses über oder unter dem SMA-26 (oder Filterauswahl) | Der niedrigste, durschnitt und höchste Kurs in den letzten 30 Tagen. |
+| **HV-Median** | Der Median der Historischen Volatilität aller Aktien. | Mit Klick auf "HV-Chart" können Sie das Histogramm anzeigen lassen. |
 
 ---
 
@@ -228,8 +231,8 @@ Eine detailierte Beschreibung finden Sie in Kapitel 7 unter "Die Strategie richt
 ### 5.5 Suchen und Sortieren 3️⃣
 
 **Suchen/Filtern**  
-Die Suche funktioniert wie ein Filter. In der Tabelle einfach mit dem Tippen von Zeichen beginnen und die Liste wird nach dem *Ticker* gefiltert.
-Der Filter kann mit der **Escape-Taste** aufgehoben oder einzelne Zeichen mit **Rücktaste** (Backspace) entfernt werden.
+Die Suche funktioniert wie ein Filter. In der Tabelle einfach mit dem Tippen von Zeichen beginnen und die Liste wird nach dem *Ticker* gefiltert.  
+Der Filter kann mit der **Escape-Taste** aufgehoben oder einzelne Zeichen mit **Rücktaste** (Backspace) entfernt werden.  
 
 **Sortieren**  
 Zum Sortieren auf die jeweilige Spaltenüberschrift in der Tabelle klicken. Mit einem zweiten Klick wird die Sortierung umgedreht.  
@@ -249,10 +252,10 @@ Mit einem Klick auf die Spalte ganz links über den Symbolen wird die ursprüngl
 | **Debug-Logging**       | **aus**                       | Schreibt detaillierte Diagnoseinformationen in die Protokolldatei `screener-levy-rsl.log`. Nur für die Fehleranalyse erforderlich. |
 
 **Feste Auswahlkriterien** (nicht veränderbar): US-Aktien, deren Primärindex der S&P-500,
-NASDAQ-100 oder Dow Jones ist, gehandelt an NASDAQ oder NYSE, mit einer Marktkapitalisierung
-von **über 50 Mrd. USD**.
+NASDAQ-100 oder Dow Jones ist, gehandelt an Börsen der NASDAQ oder NYSE.  
 
-> Mit **„Zurücksetzen“** stellen Sie alle Filter wieder auf die oben genannten Standardwerte ein.
+> [!TIP]  
+> Mit **„Zurücksetzen“** können Sie alle Filter wieder auf die oben genannten Standardwerte zurückstellen.  
 
 ---
 
@@ -263,13 +266,14 @@ von **über 50 Mrd. USD**.
 Die Basiswerte werden nach folgenden Kriterien berechnet, gefiltert und angezeigt.  
 
 - Nur Basiswerte mit einer **Historische Volatilität** oberhalb des Median kommen in die Auswahl.  
-  *Tip: Dieses Histogramm kann mit einem Mausklick rechts-oben auf "HV-Chart" im Tool angezeigt werden.*  
+  *Tip: Dieses Histogramm kann mit mit dem Screener-Tool per Mausklick rechts-oben auf "HV-Chart" angezeigt werden.*  
   <img src="resources/images/historic-volatility-histogram_chart.png" width="480" alt="RSL Momentum Screener Window">  
-- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein (RSA > 1,0).
-- In die Top 10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** liegen (Standard: 50 Mrd US$)
+- Der letzte **Schlußkurs** muss höher als der gewählte SMA sein (RSL > 1,0).
 - Der Basiswert muss in den oben genannten **Indexes primär gelistet** sein
-- Der RSL-Wert des Basiswertes muss in der Rangliste der **Top 50 des Indexes** liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
-- In den Top-10 werden nur Werte mit einem RSA > 1,0 und < 1,8 gewählt. Basiswerte mit RSA > 1,8 werden als Sicherheits-Leitplanken gegen Überhitzung (Blasen) und vor Trendumkehr bewusst rausgefiltert.
+- Der RSL-Wert des Basiswertes muss in der Rangliste der **Top 50 des Indexes** [^1] liegen (oder dessen konfigurierter Wert). Mehr Details hierzu finden sie im Kapitel "Strategie richtig anwenden".
+- In den Top-10 werden nur Werte mit einem RSL > 1,1 und < 1,8 gewählt. Basiswerte mit RSL > 1,8 werden als Sicherheits-Leitplanken gegen Überhitzung (Blasen) und vor Trendumkehr bewusst rausgefiltert. Aktien unter RSL < 1,1 haben möglichweise den Trend noch nicht bestätigt.
+- In die Top-10 werden nur Basiswerte gewählt, die höher als die gewählte **Marktkapitalisierung** [^1] liegen (Standard: 50 Mrd US$).
+- In die erweiterte Spitzengruppe (= Aktien halten) werden die **Hälfte the Top-50** [^1] gewählt.
 
 ---
 
@@ -326,7 +330,7 @@ RSL = Kurs ÷ SMA
 
 #### Zur Trendstärke
 
-Je näher der RSL-Wert an 1,0 liegt, desto schwächer der Trend und folgedessen wird man im Basiswert länger investiert sein. Ich empfehle in Werte mit einem Trend zwischen 10% und 80% zu investieren (1,10 < RSA < 1,80).
+Je näher der RSL-Wert an 1,0 liegt, desto schwächer der Trend und folgedessen wird man im Basiswert länger investiert sein. Ich empfehle in Werte mit einem Aufgwärtstrend zwischen 10% und 80% zu investieren (1,10 < RSL < 1,80).
 
 #### Zur Größenordnung
 
@@ -334,33 +338,44 @@ Ein bärischer Wert kann nur zwischen **0 und 1** liegen, ein bullischer Wert is
 
 ### Schritt 3 - Das Ranking verstehen
 
-Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge. Die Basiswerte werden in drei Gruppen aufgeteilt, die jeweils nach dem RSL sortiert werden.  
+Die Zahl in der Spalte **"Rank"** gibt den Rang des Basiswertes (Aktie). Somit hat die Nr. 1 den stärksten Trend in der jeweiligen Trendfolge. Die Basiswerte werden in drei Gruppen aufgeteilt, die jeweils nach dem RSL sortiert werden. Die drei Gruppen werden zu einer Liste zusammengefasst.  
 
 | Gruppe | Rang | Filter | Beschreibung |
 | :--- | :--- | :--- | :--- |
-| **1** | 1&#160;-&#160;50* | HV > Median und RSL > 1,0 | Die Top-50 im bullischen Trend und mit starken Momentum. |
-| **2** | 51&#160;-&#160;n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
-| **3** | n+1&#160;-&#160;... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
+| **1** | 1&nbsp;-&nbsp;50&nbsp;*) | HV > Median und RSL > 1,0 | Die Top-50 im bullischen Trend und mit starken Momentum. |
+| **2** | 51nbsp;-&nbsp;n | HV > Median | Basiswerte mit einem Momentum, die es nicht in die Top-50 geschafft haben. |
+| **3** | n+1&nbsp;-&nbsp;... | RSL > 1,0 | Basiswerte mit geringem Momentum, sie haben jedoch einen bullischen Trend. |
 
-\*) *Der Wert entspricht der Standardeinstellung der stärksten 50 Aktien (Top 10%). Sie können den Wert beliebig verändern.*  
+\*) *Der Wert entspricht der Standardeinstellung der stärksten 50 Aktien (Top 10%). Sie können den Wert beliebig verändern.* [^1]  
 
 ### Schritt 4 - Umsetzung der Strategie
 
-Bitte folgen Sie der Anleitung, wie wir diese im Seminar gelernt haben. Danke.  
+Bitte folgen Sie der Anleitung, wie wir diese im Seminar gelernt haben. Vielen Dank.  
 
 #### Die Kaufregel (Einstieg)
 
-- **Aktion**: Es werden strikt die Plätze mit ✅ gekennzeichneten gekauft. Basiswerte werden mit ⚠️ gekennzeichnet, wenn der RSA > 1,8 liegt oder der sekundäre Markttrend mit "Mixed" bewertet ist. Diese Basiswerte können sie optional je nach Risikobereitschaft kaufen (nicht empfohlen). Das Kapital wird exakt zu gleichen Teilen (je 10 %) aufgeteilt.
+- **Aktion**: Es werden strikt die Ränge mit der Markierung ✅ gekauft.
+  Kaufen/Halten Sie maximal 10 Aktien im Depot und teilen Sie das Kapital zu gleichen Teilen (je 10 %) auf.  
+  Aktien mit ⚠️ kaufen Sie besser nicht. Dieses Warn-Symbol wird bei Aktien mit RSL > 1,8 angezeigt oder wenn der sekundäre Markttrend mit "Mixed" bewertet ist. Diese Basiswerte können sie je nach Ihrer persönlichen Risikobereitschaft kaufen (nicht empfohlen).
 
 - **Handeln Sie diese Strategie niemals gegen den Trend.**
-- Liegt die RSL nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren Signale (siehe Kapitel "Trendstärke" oberhalb).
+- Liegt die RSL nahe **1,0** (Seitwärtstrend), liefert die Strategie keine verwertbaren Signale (siehe "Trendstärke" oberhalb in diesem Kapitel).
 
 #### Die Verkaufsregel (Trägheitsregel, Ausstieg)
 
 - **Problem**: Fällt die Aktie von Platz 10 auf Platz 11, würde ein sofortiger Verkauf große Transaktionskosten verursachen.
-- **Lösung** nach Levy: Eine Aktie wird **nicht** sofort verkauft, wenn sie aus den Top 10 rutscht. Sie wird so lange im Depot gehalten, wie sie sich in der erweiterten Spitzengruppe - mit 💿 gekennzeichnet - der qualifizierten Liste aufhält.
-- **Verkaufssignal**: Erst wenn die Aktie nicht mehr mit 💿 gekennzeichnet ist (keine Markierung hat), wird sie verkauft. Der frei gewordene Platz wird durch den nächstbesten Aufsteiger aus den Top 10 besetzt, den man noch nicht besitzt.
+- **Lösung** nach Levy: Eine Aktie wird **nicht** sofort verkauft, wenn sie aus den Top 10 rutscht. Sie wird so lange im Depot gehalten, wie sie sich in der erweiterten Spitzengruppe befindet. Diese sind mit 💿 gekennzeichnet.
+- **Verkaufssignal**: Erst wenn die Aktie nicht mehr mit ✅, ⚠️ oder 💿 gekennzeichnet ist (keine Markierung hat), wird sie verkauft. Der frei gewordene Platz wird durch den nächstbesten Aufsteiger ✅-Aktie aus den Top 10 besetzt, den man noch nicht im Portfolio hat.
+
+Eine Schritt-für-Schritt Anleitung finden Sie oberhalb im Kapitel [Anleitung in 8 Schritten](#3-quick-guide---anleitung-des-screener-tools-in-8-schritten).  
+
+Falls Sie noch Unklarheiten oder Fragen haben, dann helfen wir gerne auch in einem Coaching weiter. Der Author kann Ihnen die Kontaktdaten der Coaches geben.  
+
+---
+
+[^1]: Einfachheitshalber verwende ich den Standardwert. Diese Einstellung kann geändert und verändert den Filter und die endgültige Auswahl. siehe Kapitel [Filtereinstellungen](#56-filtereinstellungen-4️⃣6️⃣).  
 
 ---
 
 *© 2026 Juergen Schranz – The DevOps Engineers · Lizenz: Apache License 2.0*
+
